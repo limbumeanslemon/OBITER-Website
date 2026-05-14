@@ -35,7 +35,7 @@
       </nav>
 
       <div class="navbar-cta">
-        <a href="https://www.youtube.com/@GNLUObiter" target="_blank" rel="noopener" class="btn btn-primary">
+        <a href="https://www.youtube.com/@GNLUObiter" target="_blank" rel="noopener" class="btn btn-yt-red">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
             <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
           </svg>
@@ -54,7 +54,7 @@
     <a href="#guests">Guests</a>
     <a href="#team">Team</a>
     <a href="#contact">Contact</a>
-    <a href="https://www.youtube.com/@GNLUObiter" target="_blank" rel="noopener" class="btn btn-primary">
+    <a href="https://www.youtube.com/@GNLUObiter" target="_blank" rel="noopener" class="btn btn-yt-red">
       Watch on YouTube
     </a>
   </nav>
@@ -66,6 +66,14 @@
      HERO — split layout (21st.dev Magic redesign)
 ════════════════════════════════════════════════════════════ -->
 <section class="hero" id="home">
+  <div class="hero-blobs" aria-hidden="true">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+    <div class="hero-blob hero-blob-4"></div>
+    <div class="hero-blob hero-blob-5"></div>
+    <div class="hero-blob hero-blob-interactive" id="hero-blob-interactive"></div>
+  </div>
   <div class="container">
     <div class="hero-split">
 
@@ -149,7 +157,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      ABOUT STRIP
 ════════════════════════════════════════════════════════════ -->
-<section class="about-strip">
+<section class="about-strip bg-dot-grid">
   <div class="container">
     <div class="about-strip-inner">
       <div>
@@ -178,8 +186,7 @@
       </a>
     </div>
 
-    <div class="featured-scroll-viewport">
-    <div class="featured-card" id="featured-scroll-card">
+    <div class="featured-card" id="featured-card">
       <div class="featured-guest-info">
         <div class="featured-ep-badge">Episode 10 · Now Playing</div>
         <h3 class="featured-title">Sr. Adv. Gourab Banerji — Supreme Court of India</h3>
@@ -212,8 +219,7 @@
           </div>
         </div>
       </div>
-    </div>
-    </div><!-- /featured-scroll-viewport -->
+    </div><!-- /featured-card -->
 
   </div>
 </section>
@@ -221,7 +227,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      EPISODES ARCHIVE
 ════════════════════════════════════════════════════════════ -->
-<section class="episodes-section" id="episodes">
+<section class="episodes-section bg-dot-grid" id="episodes">
   <div class="container">
     <div class="section-header">
       <div>
@@ -229,8 +235,10 @@
         <h2>Episodes Archive</h2>
       </div>
     </div>
-    <div class="episodes-grid" id="episodes-grid">
-      <!-- Rendered by episodes.js + JS below -->
+    <div class="episodes-scroll-container">
+      <div class="episodes-grid" id="episodes-grid">
+        <!-- Rendered by episodes.js + JS below -->
+      </div>
     </div>
   </div>
 </section>
@@ -238,7 +246,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      GUEST DIRECTORY
 ════════════════════════════════════════════════════════════ -->
-<section class="guests-section" id="guests">
+<section class="guests-section bg-dot-grid" id="guests">
   <div class="container">
     <div class="section-header">
       <div>
@@ -334,7 +342,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      TEAM
 ════════════════════════════════════════════════════════════ -->
-<section class="team-section" id="team">
+<section class="team-section bg-dot-grid" id="team">
   <div class="container">
     <div class="section-header">
       <div>
@@ -611,16 +619,23 @@
 </footer>
 
 <!-- ═══════════════════════════════════════════════════════════
-     LIQUID GLASS SVG FILTER
+     SVG FILTERS
 ════════════════════════════════════════════════════════════ -->
-<svg class="hidden" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
+<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
   <defs>
+    <!-- Liquid glass distortion (reduced scale for subtle effect) -->
     <filter id="liquid-glass-filter" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
       <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="1" seed="1" result="turbulence"/>
       <feGaussianBlur in="turbulence" stdDeviation="2" result="blurredNoise"/>
-      <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="70" xChannelSelector="R" yChannelSelector="B" result="displaced"/>
-      <feGaussianBlur in="displaced" stdDeviation="4" result="finalBlur"/>
+      <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="12" xChannelSelector="R" yChannelSelector="B" result="displaced"/>
+      <feGaussianBlur in="displaced" stdDeviation="2" result="finalBlur"/>
       <feComposite in="finalBlur" in2="finalBlur" operator="over"/>
+    </filter>
+    <!-- Gooey blob filter (grid.md) -->
+    <filter id="goo-filter">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"/>
+      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
     </filter>
   </defs>
 </svg>
@@ -666,8 +681,10 @@ function escHtml(str) {
 }
 
 function getYoutubeId(url) {
-  const m = url.match(/[?&]v=([^&]+)/);
-  return m ? m[1] : '';
+  const short = url.match(/youtu\.be\/([^?&]+)/);
+  if (short) return short[1];
+  const long = url.match(/[?&]v=([^&]+)/);
+  return long ? long[1] : '';
 }
 
 /* ── Episode Cards ─────────────────────────────────────────── */
@@ -686,7 +703,7 @@ function renderEpisodes() {
     const numberStr = `EP ${ep.number}`;
     const ytId = !isComing && ep.url ? getYoutubeId(ep.url) : '';
 
-    // YouTube thumbnail
+    // YouTube thumbnail — links directly to YouTube
     const thumbHtml = ytId
       ? `<a href="${escHtml(ep.url)}" target="_blank" rel="noopener" class="ep-card-thumb" tabindex="-1" aria-hidden="true">
            <img src="https://img.youtube.com/vi/${ytId}/mqdefault.jpg"
@@ -700,14 +717,14 @@ function renderEpisodes() {
          </a>`
       : '';
 
-    // Liquid glass watch button
+    // Watch button — links directly to YouTube
     const watchBtn = !isComing && ep.url
-      ? `<a href="${escHtml(ep.url)}" target="_blank" rel="noopener" class="btn-watch btn-liquid btn-liquid-blue">
+      ? `<a href="${escHtml(ep.url)}" target="_blank" rel="noopener" class="btn-watch btn-liquid btn-liquid-blue" aria-label="Watch ${escHtml(ep.guestShort)} on YouTube">
            <span class="btn-liquid-bubble" aria-hidden="true"></span>
            <span class="btn-liquid-glass" aria-hidden="true"></span>
            <span class="btn-liquid-content">
              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-             Watch
+             Watch on YouTube
            </span>
          </a>`
       : `<span style="font-size:12px;color:var(--text-light);font-weight:500;">Coming Soon</span>`;
@@ -721,7 +738,7 @@ function renderEpisodes() {
       : '';
 
     return `
-      <article class="episode-card${isComing ? ' coming-soon' : ''}">
+      <article class="episode-card${isComing ? ' coming-soon' : ''}" data-glow>
         ${thumbHtml}
         <div class="ep-card-top">
           <span class="ep-badge">${numberStr}</span>
@@ -748,7 +765,7 @@ function renderGuests() {
   grid.innerHTML = guests.map((g, i) => {
     const num = String(i + 1).padStart(2, '0');
     return `
-      <div class="guest-card">
+      <div class="guest-card" data-glow>
         <div class="guest-photo-wrap" style="position:relative;">
           ${avatarHtml(g.photoFile, g.name, false)}
         </div>
@@ -770,7 +787,7 @@ function renderTeamGroup(dataArr, containerId) {
       ? `<div class="team-batch">${escHtml(member.batch)}</div>`
       : '';
     return `
-      <div class="team-card">
+      <div class="team-card" data-glow>
         <div class="team-photo-wrap" style="position:relative;">
           ${avatarHtml(member.photoFile, member.name, false)}
         </div>
@@ -846,25 +863,6 @@ function initNavbarScroll() {
   }, { passive: true });
 }
 
-/* ── Container Scroll Animation (Aceternity) ─────────────────── */
-function initContainerScroll() {
-  const card = document.getElementById('featured-scroll-card');
-  if (!card) return;
-
-  function update() {
-    const rect = card.getBoundingClientRect();
-    const wH = window.innerHeight;
-    // 0 when card top is at viewport bottom → 1 when card is 70% into viewport
-    const progress = Math.max(0, Math.min(1, (wH - rect.top) / (wH * 0.75)));
-    const rotateX = 18 * (1 - progress);
-    const scale = 1 + 0.04 * (1 - progress);
-    card.style.transform = `rotateX(${rotateX}deg) scale(${scale})`;
-  }
-
-  window.addEventListener('scroll', update, { passive: true });
-  update();
-}
-
 /* ── Footer Fade Animation (efferd) ─────────────────────────── */
 function initFooterFade() {
   const items = document.querySelectorAll('.footer-fade');
@@ -883,6 +881,104 @@ function initFooterFade() {
   items.forEach(item => observer.observe(item));
 }
 
+/* ── Glow Card Borders (borders.md) ─────────────────────────── */
+function initGlowCards() {
+  document.addEventListener('pointermove', (e) => {
+    document.querySelectorAll('[data-glow]').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      el.style.setProperty('--x', (e.clientX - rect.left).toFixed(1));
+      el.style.setProperty('--xp', (e.clientX / window.innerWidth).toFixed(3));
+      el.style.setProperty('--y', (e.clientY - rect.top).toFixed(1));
+      el.style.setProperty('--yp', (e.clientY / window.innerHeight).toFixed(3));
+    });
+  });
+}
+
+/* ── Episode Archive Scroll Reveal ────────────────────────── */
+function initEpisodeReveal() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Stagger: find index among siblings
+        const siblings = Array.from(entry.target.parentElement.children);
+        const idx = siblings.indexOf(entry.target);
+        setTimeout(() => {
+          entry.target.classList.add('revealed');
+        }, Math.min(idx * 80, 600)); // true sequential stagger
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  // Observe after episodes are rendered
+  document.querySelectorAll('.episode-card').forEach(card => observer.observe(card));
+}
+
+/* ── Hero Interactive Blob (bg.md inspired) ─────────────────── */
+function initHeroBlobs() {
+  const blob = document.getElementById('hero-blob-interactive');
+  const hero = document.querySelector('.hero');
+  if (!blob || !hero) return;
+
+  let curX = 0, curY = 0, tgX = 0, tgY = 0;
+
+  function move() {
+    curX += (tgX - curX) / 20;
+    curY += (tgY - curY) / 20;
+    blob.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
+    requestAnimationFrame(move);
+  }
+
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    tgX = e.clientX - rect.left - blob.offsetWidth / 2;
+    tgY = e.clientY - rect.top  - blob.offsetHeight / 2;
+  });
+
+  move();
+}
+
+/* ── Episodes Container Scroll (scroll.md adapted) ──────────── */
+function initContainerScroll() {
+  const section = document.querySelector('.episodes-section');
+  const grid    = document.getElementById('episodes-grid');
+  if (!section || !grid) return;
+
+  let raf = null;
+
+  function update() {
+    raf = null;
+    const rect  = section.getBoundingClientRect();
+    const wh    = window.innerHeight;
+    const isMob = window.innerWidth <= 768;
+
+    // 0 = section top at bottom of viewport, 1 = section top at top of viewport
+    const progress = Math.max(0, Math.min(1, (wh - rect.top) / (wh * 0.75)));
+
+    const rotate = 20 * (1 - progress);
+    const s0 = isMob ? 0.78 : 1.05;
+    const s1 = isMob ? 0.95 : 1.00;
+    const scale  = s0 + (s1 - s0) * progress;
+
+    grid.style.transform = `rotateX(${rotate}deg) scale(${scale})`;
+
+    if (progress < 0.99) {
+      const d = 1 - progress;
+      grid.style.boxShadow =
+        `0 ${Math.round(9*d)}px ${Math.round(20+30*d)}px rgba(0,0,0,${(0.35*d).toFixed(2)}),` +
+        `0 ${Math.round(37*d)}px ${Math.round(37*d)}px rgba(0,0,0,${(0.25*d).toFixed(2)})`;
+    } else {
+      grid.style.boxShadow = '';
+    }
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!raf) raf = requestAnimationFrame(update);
+  }, { passive: true });
+
+  update();
+}
+
 /* ── Init ────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   renderEpisodes();
@@ -892,10 +988,14 @@ document.addEventListener('DOMContentLoaded', () => {
   initBtsGallery();
   initMobileNav();
   initNavbarScroll();
-  initContainerScroll();
   initFooterFade();
+  initGlowCards();
+  initEpisodeReveal();
+  initHeroBlobs();
+  initContainerScroll();
 });
 </script>
+
 
 </body>
 </html>

@@ -100,7 +100,7 @@ const episodes = [
     shortTitle: "Essential Skills for Lawyers │ Part 1",
     fullTitle: "Essential Skills for Lawyers │ Sr. Adv. Shri Shalin Mehta │ Part 1",
     date: "19 Jul 2025",
-    url: "https://www.youtube.com/watch?v=lMfGXw65LfQ",
+    url: "https://youtu.be/I_7_kZTzeSQ?si=yfCF9nV1TTct2s87",
     description: "One of the youngest Senior Advocates of the Gujarat High Court reflects on courtroom fundamentals and the mindset required to thrive in litigation.",
     tags: ["Advocacy Skills", "Litigation", "Gujarat HC", "Mentorship"],
     quote: "The Chief Justice called me in chambers and said, 'Look, Mr. Mehta, today I'm your client. Now, what is your recommendation?'"
