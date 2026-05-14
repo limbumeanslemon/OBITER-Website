@@ -658,6 +658,7 @@ p { line-height: 1.7; }
   gap: 14px;
   transition: box-shadow 0.25s, transform 0.25s;
   position: relative;
+  overflow: hidden;
 }
 .episode-card:hover {
   box-shadow: var(--shadow-lg);
@@ -1300,11 +1301,13 @@ p { line-height: 1.7; }
   margin-bottom: 52px;
   gap: 12px;
   box-shadow: none;
+  background: transparent;
 }
 .hero-cta.btn-liquid:hover {
   transform: scale(1.05);
   box-shadow: none;
   background: transparent;
+  background-color: transparent;
   color: #1a1200;
 }
 
