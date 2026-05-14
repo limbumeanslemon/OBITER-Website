@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GNLU Obiter — The Law Podcast</title>
+  <meta name="description" content="Judges, senior advocates, global academics, and diplomats on the work, ethics, and craft of law. A podcast by GNLU Research & Development Cell." />
+  <link rel="icon" type="image/png" href="podcastlogo.png" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════════════════ -->
+<header class="navbar" id="navbar">
+  <div class="container">
+    <div class="navbar-inner">
+
+      <a href="#home" class="navbar-logo">
+        <img src="podcastlogo.png" alt="GNLU Obiter Logo"
+             onerror="this.style.display='none'" />
+        <div class="navbar-logo-text">
+          <span>GNLU</span> Obiter
+        </div>
+      </a>
+
+      <nav aria-label="Main navigation">
+        <ul class="navbar-nav">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#episodes">Episodes</a></li>
+          <li><a href="#team">Team</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="navbar-cta">
+        <a href="https://www.youtube.com/@GNLUObiter" target="_blank" rel="noopener" class="btn btn-primary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+          </svg>
+          Watch on YouTube
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
+    <a href="#home">Home</a>
+    <a href="#episodes">Episodes</a>
+    <a href="#guests">Guests</a>
+    <a href="#team">Team</a>
+    <a href="#contact">Contact</a>
+    <a href="https://www.youtube.com/@GNLUObiter" target="_blank" rel="noopener" class="btn btn-primary">
+      Watch on YouTube
+    </a>
+  </nav>
+</header>
+
+<main>
+
+<!-- ═══════════════════════════════════════════════════════════
+     HERO — split layout (21st.dev Magic redesign)
+════════════════════════════════════════════════════════════ -->
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-split">
+
+      <!-- LEFT: Text content -->
+      <div class="hero-left">
+
+        <div class="hero-eyebrow">
+          <div class="hero-eyebrow-dot"></div>
+          <span class="section-label">GNLU Research &amp; Development Cell</span>
+        </div>
+
+        <h1 class="hero-title">
+          GNLU Obiter —
+          <span class="hero-title-italic">The Law Podcast</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Judges, senior advocates, global academics, and diplomats, on the work, ethics, and craft of law.
+        </p>
+
+        <a href="https://www.youtube.com/@GNLUObiter" target="_blank" rel="noopener" class="hero-cta btn-liquid btn-liquid-yellow">
+          <span class="btn-liquid-bubble" aria-hidden="true"></span>
+          <span class="btn-liquid-glass" aria-hidden="true"></span>
+          <span class="btn-liquid-content">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+            Watch on YouTube
+          </span>
+        </a>
+
+        <div class="hero-stats">
+          <span class="hero-stat-item">Est. 2024</span>
+          <div class="hero-stat-divider"></div>
+          <span class="hero-stat-item">GNLU Research &amp; Development Cell</span>
+          <div class="hero-stat-divider"></div>
+          <span class="hero-stat-item">11 Episodes</span>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Now Playing card -->
+      <div class="hero-right">
+        <div class="now-playing-card">
+
+          <div class="now-playing-header">
+            <div class="hero-pulse-dot"></div>
+            <span class="now-playing-label">Now Playing</span>
+          </div>
+
+          <div class="hero-thumb-wrap">
+            <img
+              src="https://img.youtube.com/vi/wslQ1h5CK_M/maxresdefault.jpg"
+              onerror="this.src='https://img.youtube.com/vi/wslQ1h5CK_M/hqdefault.jpg'"
+              alt="Sr. Adv. Gourab Banerji — Episode 10 Part 2" />
+            <div class="hero-ep-badge">EP. 10 · Part 2</div>
+            <a href="https://www.youtube.com/watch?v=wslQ1h5CK_M"
+               target="_blank" rel="noopener"
+               class="hero-thumb-play"
+               aria-label="Watch Episode 10 Part 2 on YouTube">
+              <div class="hero-thumb-play-btn">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                  <polygon points="5 3 19 12 5 21 5 3"/>
+                </svg>
+              </div>
+            </a>
+          </div>
+
+          <div class="hero-guest-info">
+            <h3 class="hero-guest-name">Sr. Adv. Gourab Banerji</h3>
+            <p class="hero-guest-sub">Senior Advocate, Supreme Court of India · President, Arbitration Bar of India</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     ABOUT STRIP
+════════════════════════════════════════════════════════════ -->
+<section class="about-strip">
+  <div class="container">
+    <div class="about-strip-inner">
+      <div>
+        <div class="about-strip-label">Our Mission</div>
+        <h2 class="about-strip-heading">Building the Bridge</h2>
+      </div>
+      <blockquote class="about-strip-text">
+        "In today's world, access to information is the key to unlocking limitless potential. Often, questions go unanswered because there is no bridge to the people who hold the answers. We build that bridge."
+      </blockquote>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FEATURED EPISODE
+════════════════════════════════════════════════════════════ -->
+<section class="featured" id="featured">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label blue" style="margin-bottom:6px;">Latest Release</div>
+        <h2>Now Playing</h2>
+      </div>
+      <a href="#episodes" class="section-label blue" style="font-size:12px; text-transform:uppercase; letter-spacing:0.12em;">
+        View All Episodes →
+      </a>
+    </div>
+
+    <div class="featured-scroll-viewport">
+    <div class="featured-card" id="featured-scroll-card">
+      <div class="featured-guest-info">
+        <div class="featured-ep-badge">Episode 10 · Now Playing</div>
+        <h3 class="featured-title">Sr. Adv. Gourab Banerji — Supreme Court of India</h3>
+        <p class="featured-designation">Senior Advocate, Supreme Court of India · President, Arbitration Bar of India</p>
+      </div>
+
+      <div class="featured-embeds">
+        <div class="embed-block">
+          <div class="embed-part-label">Part 1 of 2 — Lessons from Fali, Jaitley, Rohinton &amp; Courtroom</div>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/2lM-FbyXvWo"
+              title="Sr. Adv. Gourab Banerji — Part 1"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+        <div class="embed-block">
+          <div class="embed-part-label">Part 2 of 2 — First Day at Supreme Court, International Arbitration &amp; Views on Life</div>
+          <div class="video-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/wslQ1h5CK_M"
+              title="Sr. Adv. Gourab Banerji — Part 2"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div><!-- /featured-scroll-viewport -->
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     EPISODES ARCHIVE
+════════════════════════════════════════════════════════════ -->
+<section class="episodes-section" id="episodes">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label" style="margin-bottom:6px;">All Episodes</div>
+        <h2>Episodes Archive</h2>
+      </div>
+    </div>
+    <div class="episodes-grid" id="episodes-grid">
+      <!-- Rendered by episodes.js + JS below -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     GUEST DIRECTORY
+════════════════════════════════════════════════════════════ -->
+<section class="guests-section" id="guests">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label" style="margin-bottom:6px;">Our Guests</div>
+        <h2>Guest Directory</h2>
+      </div>
+    </div>
+    <div class="guests-grid" id="guests-grid">
+      <!-- Rendered by team.js + JS below -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DIRECTOR'S MESSAGE
+════════════════════════════════════════════════════════════ -->
+<section class="messages-section" id="messages">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label" style="margin-bottom:6px;">Words of Support</div>
+        <h2>Messages</h2>
+      </div>
+    </div>
+
+    <div class="message-warning">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+        <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+      </svg>
+      Replace placeholder text before publishing
+    </div>
+
+    <!-- Director's Message -->
+    <article class="message-card">
+      <div class="message-card-inner">
+        <div class="message-photo-wrap">
+          <div class="message-photo">
+            <img src="director.png" alt="Director"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="message-photo-placeholder" style="display:none; align-items:center; justify-content:center; width:100%; height:100%; background:var(--bg); color:var(--text-light); font-size:11px; text-align:center; padding:8px; line-height:1.4;">
+              Photo<br/>director.png
+            </div>
+          </div>
+          <div class="message-person-name">[Director's Name]</div>
+          <div class="message-person-title">[Title &amp; Credentials]</div>
+        </div>
+        <div class="message-content">
+          <h3 class="message-heading">Director's Message</h3>
+          <div class="message-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            <br/><br/>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+          </div>
+          <div class="message-pullquote">
+            "[Replace with a meaningful pull-quote from the Director's message]"
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Professor's Message -->
+    <article class="message-card">
+      <div class="message-card-inner">
+        <div class="message-photo-wrap">
+          <div class="message-photo">
+            <img src="professor.png" alt="Professor"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+            <div class="message-photo-placeholder" style="display:none; align-items:center; justify-content:center; width:100%; height:100%; background:var(--bg); color:var(--text-light); font-size:11px; text-align:center; padding:8px; line-height:1.4;">
+              Photo<br/>professor.png
+            </div>
+          </div>
+          <div class="message-person-name">[Professor's Name]</div>
+          <div class="message-person-title">[Title &amp; Credentials]</div>
+        </div>
+        <div class="message-content">
+          <h3 class="message-heading">Professor's Message</h3>
+          <div class="message-body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            <br/><br/>
+            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+          </div>
+          <div class="message-pullquote">
+            "[Replace with a meaningful pull-quote from the Professor's message]"
+          </div>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     TEAM
+════════════════════════════════════════════════════════════ -->
+<section class="team-section" id="team">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label" style="margin-bottom:6px;">The People Behind the Mic</div>
+        <h2>Our Team</h2>
+      </div>
+    </div>
+
+    <div class="team-group-label">Core Team</div>
+    <div class="team-grid" id="core-team-grid">
+      <!-- Rendered by JS -->
+    </div>
+
+    <div class="team-group-label">Members</div>
+    <div class="team-grid" id="members-grid">
+      <!-- Rendered by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════
+     BTS GALLERY
+════════════════════════════════════════════════════════════ -->
+<section class="bts-section" id="bts">
+  <div class="container">
+    <div class="section-header">
+      <div>
+        <div class="section-label" style="margin-bottom:6px;">Behind the Scenes</div>
+        <h2>BTS Gallery</h2>
+      </div>
+    </div>
+  </div>
+
+  <div style="padding: 0 24px; max-width:1248px; margin:0 auto; position:relative;">
+    <div class="bts-scroll-wrap">
+      <button class="bts-scroll-btn left" id="bts-left" aria-label="Scroll left">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="15 18 9 12 15 6"/>
+        </svg>
+      </button>
+      <div class="bts-reel" id="bts-reel">
+        <!-- 10 photo placeholders -->
+        <div class="bts-photo" id="bts-1">
+          <img src="bts_01.jpg" alt="Behind the Scenes 01" onerror="this.style.display='none'" />
+          <div class="bts-photo-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>bts_01.jpg</span>
+          </div>
+        </div>
+        <div class="bts-photo" id="bts-2">
+          <img src="bts_02.jpg" alt="Behind the Scenes 02" onerror="this.style.display='none'" />
+          <div class="bts-photo-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>bts_02.jpg</span>
+          </div>
+        </div>
+        <div class="bts-photo" id="bts-3">
+          <img src="bts_03.jpg" alt="Behind the Scenes 03" onerror="this.style.display='none'" />
+          <div class="bts-photo-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>bts_03.jpg</span>
+          </div>
+        </div>
+        <div class="bts-photo" id="bts-4">
+          <img src="bts_04.jpg" alt="Behind the Scenes 04" onerror="this.style.display='none'" />
+          <div class="bts-photo-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>bts_04.jpg</span>
+          </div>
+        </div>
+        <div class="bts-photo" id="bts-5">
+          <img src="bts_05.jpg" alt="Behind the Scenes 05" onerror="this.style.display='none'" />
+          <div class="bts-photo-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>bts_05.jpg</span>
+          </div>
+        </div>
+        <div class="bts-photo" id="bts-6">
+          <img src="bts_06.jpg" alt="Behind the Scenes 06" onerror="this.style.display='none'" />
+          <div class="bts-photo-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>bts_06.jpg</span>
+          </div>
+        </div>
+        <div class="bts-photo" id="bts-7">
+          <img src="bts_07.jpg" alt="Behind the Scenes 07" onerror="this.style.display='none'" />
+          <div class="bts-photo-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>bts_07.jpg</span>
+          </div>
+        </div>
+        <div class="bts-photo" id="bts-8">
+          <img src="bts_08.jpg" alt="Behind the Scenes 08" onerror="this.style.display='none'" />
+          <div class="bts-photo-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>bts_08.jpg</span>
+          </div>
+        </div>
+        <div class="bts-photo" id="bts-9">
+          <img src="bts_09.jpg" alt="Behind the Scenes 09" onerror="this.style.display='none'" />
+          <div class="bts-photo-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>bts_09.jpg</span>
+          </div>
+        </div>
+        <div class="bts-photo" id="bts-10">
+          <img src="bts_10.jpg" alt="Behind the Scenes 10" onerror="this.style.display='none'" />
+          <div class="bts-photo-placeholder">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>bts_10.jpg</span>
+          </div>
+        </div>
+      </div>
+      <button class="bts-scroll-btn right" id="bts-right" aria-label="Scroll right">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="9 18 15 12 9 6"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════════
+     FOOTER — efferd layout
+════════════════════════════════════════════════════════════ -->
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-glow" aria-hidden="true"></div>
+
+    <div class="footer-grid">
+
+      <!-- Brand column -->
+      <div class="footer-brand footer-fade" data-delay="0">
+        <div class="footer-brand-name"><span>GNLU</span> Obiter</div>
+        <p class="footer-tagline">
+          Judges, senior advocates, global academics, and diplomats, on the work, ethics, and craft of law.
+        </p>
+        <div class="footer-social">
+          <a href="https://www.youtube.com/@GNLUObiter" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/gnluobiter/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/company/gnlu-obiter-the-law-podcast/" target="_blank" rel="noopener" class="footer-social-link" aria-label="LinkedIn">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <a href="mailto:gnluobiterlawpodcast@gnlu.ac.in" class="footer-social-link" aria-label="Email">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </a>
+        </div>
+        <p class="footer-copy" style="margin-top:auto;">
+          <strong>© 2026 GNLU Obiter.</strong> All rights reserved.
+        </p>
+      </div>
+
+      <!-- Links grid -->
+      <div class="footer-links-grid">
+
+        <!-- Navigate -->
+        <div class="footer-fade" data-delay="0.1">
+          <div class="footer-col-title">Navigate</div>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#episodes">Episodes</a></li>
+            <li><a href="#guests">Guests</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#bts">BTS Gallery</a></li>
+          </ul>
+        </div>
+
+        <!-- Watch -->
+        <div class="footer-fade" data-delay="0.2">
+          <div class="footer-col-title">Watch &amp; Follow</div>
+          <ul class="footer-links">
+            <li>
+              <a href="https://www.youtube.com/@GNLUObiter" target="_blank" rel="noopener">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                YouTube
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/gnluobiter/" target="_blank" rel="noopener">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                Instagram
+              </a>
+            </li>
+            <li>
+              <a href="https://www.linkedin.com/company/gnlu-obiter-the-law-podcast/" target="_blank" rel="noopener">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div class="footer-fade" data-delay="0.3">
+          <div class="footer-col-title">Contact</div>
+          <div class="footer-contact-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+            <a href="mailto:gnluobiterlawpodcast@gnlu.ac.in">gnluobiterlawpodcast@gnlu.ac.in</a>
+          </div>
+          <div class="footer-contact-item">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+            </svg>
+            <span>Gujarat National Law University, Gandhinagar, Gujarat</span>
+          </div>
+          <div class="footer-contact-item" style="margin-top:4px;">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+            </svg>
+            <span>GNLU R&amp;D Cell · Est. 2024</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-divider"></div>
+
+    <div class="footer-bottom footer-fade" data-delay="0.35">
+      <p class="footer-copy">
+        <strong>© 2026 GNLU Obiter · The Law Podcast.</strong> All rights reserved.
+      </p>
+      <p class="footer-rdc">GNLU Research &amp; Development Cell · Est. 2024</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════
+     LIQUID GLASS SVG FILTER
+════════════════════════════════════════════════════════════ -->
+<svg class="hidden" aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
+  <defs>
+    <filter id="liquid-glass-filter" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="1" seed="1" result="turbulence"/>
+      <feGaussianBlur in="turbulence" stdDeviation="2" result="blurredNoise"/>
+      <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="70" xChannelSelector="R" yChannelSelector="B" result="displaced"/>
+      <feGaussianBlur in="displaced" stdDeviation="4" result="finalBlur"/>
+      <feComposite in="finalBlur" in2="finalBlur" operator="over"/>
+    </filter>
+  </defs>
+</svg>
+
+<!-- ═══════════════════════════════════════════════════════════
+     DATA FILES
+════════════════════════════════════════════════════════════ -->
+<script src="episodes.js"></script>
+<script src="team.js"></script>
+
+<!-- ═══════════════════════════════════════════════════════════
+     RENDERING ENGINE
+════════════════════════════════════════════════════════════ -->
+<script>
+/* ── Helpers ────────────────────────────────────────────────── */
+function getInitials(name) {
+  return name
+    .replace(/^(Prof\.|Dr\.|Sr\.|Adv\.|Shri|Justice|H\.E\.|His Excellency|Retd\.)\s+/gi, '')
+    .split(' ')
+    .filter(w => w.length > 1)
+    .slice(0, 2)
+    .map(w => w[0].toUpperCase())
+    .join('');
+}
+
+function avatarHtml(photoFile, name, darkMode) {
+  const initials = getInitials(name);
+  const placeholderClass = darkMode ? 'avatar-placeholder dark' : 'avatar-placeholder';
+  return `
+    <img src="${photoFile}" alt="${escHtml(name)}"
+         style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;"
+         onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+    <div class="${placeholderClass}" style="display:none;">${initials}</div>
+  `;
+}
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function getYoutubeId(url) {
+  const m = url.match(/[?&]v=([^&]+)/);
+  return m ? m[1] : '';
+}
+
+/* ── Episode Cards ─────────────────────────────────────────── */
+function renderEpisodes() {
+  const grid = document.getElementById('episodes-grid');
+  if (!grid || typeof episodes === 'undefined') return;
+
+  grid.innerHTML = episodes.map(ep => {
+    const isComing = ep.comingSoon === true;
+    const partLabel = ep.part
+      ? `<span class="ep-part-badge">Part ${ep.part}/${ep.totalParts}</span>`
+      : '';
+    const comingLabel = isComing
+      ? `<span class="ep-coming-badge">Coming Soon</span>`
+      : '';
+    const numberStr = `EP ${ep.number}`;
+    const ytId = !isComing && ep.url ? getYoutubeId(ep.url) : '';
+
+    // YouTube thumbnail
+    const thumbHtml = ytId
+      ? `<a href="${escHtml(ep.url)}" target="_blank" rel="noopener" class="ep-card-thumb" tabindex="-1" aria-hidden="true">
+           <img src="https://img.youtube.com/vi/${ytId}/mqdefault.jpg"
+                alt="${escHtml(ep.guestShort)}"
+                onerror="this.parentElement.style.display='none'" />
+           <div class="ep-card-thumb-play">
+             <div class="ep-card-thumb-play-icon">
+               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+             </div>
+           </div>
+         </a>`
+      : '';
+
+    // Liquid glass watch button
+    const watchBtn = !isComing && ep.url
+      ? `<a href="${escHtml(ep.url)}" target="_blank" rel="noopener" class="btn-watch btn-liquid btn-liquid-blue">
+           <span class="btn-liquid-bubble" aria-hidden="true"></span>
+           <span class="btn-liquid-glass" aria-hidden="true"></span>
+           <span class="btn-liquid-content">
+             <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+             Watch
+           </span>
+         </a>`
+      : `<span style="font-size:12px;color:var(--text-light);font-weight:500;">Coming Soon</span>`;
+
+    const tagsHtml = ep.tags
+      .map(t => `<span class="tag">${escHtml(t)}</span>`)
+      .join('');
+
+    const quoteHtml = ep.quote
+      ? `<div class="ep-card-quote">"${escHtml(ep.quote)}"</div>`
+      : '';
+
+    return `
+      <article class="episode-card${isComing ? ' coming-soon' : ''}">
+        ${thumbHtml}
+        <div class="ep-card-top">
+          <span class="ep-badge">${numberStr}</span>
+          ${partLabel}
+          ${comingLabel}
+          <span class="ep-date">${escHtml(ep.date)}</span>
+        </div>
+        <div class="ep-card-guest">${escHtml(ep.guestShort)}</div>
+        <h3 class="ep-card-title">${escHtml(ep.shortTitle)}</h3>
+        <p class="ep-card-desc">${escHtml(ep.description)}</p>
+        ${quoteHtml}
+        <div class="ep-card-tags">${tagsHtml}</div>
+        <div class="ep-card-footer">${watchBtn}</div>
+      </article>
+    `;
+  }).join('');
+}
+
+/* ── Guest Directory ────────────────────────────────────────── */
+function renderGuests() {
+  const grid = document.getElementById('guests-grid');
+  if (!grid || typeof guests === 'undefined') return;
+
+  grid.innerHTML = guests.map((g, i) => {
+    const num = String(i + 1).padStart(2, '0');
+    return `
+      <div class="guest-card">
+        <div class="guest-photo-wrap" style="position:relative;">
+          ${avatarHtml(g.photoFile, g.name, false)}
+        </div>
+        <div class="guest-number">Guest ${num}</div>
+        <div class="guest-name">${escHtml(g.name)}</div>
+        <div class="guest-designation">${escHtml(g.designation)}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+/* ── Team ───────────────────────────────────────────────────── */
+function renderTeamGroup(dataArr, containerId) {
+  const grid = document.getElementById(containerId);
+  if (!grid) return;
+
+  grid.innerHTML = dataArr.map(member => {
+    const batchHtml = member.batch
+      ? `<div class="team-batch">${escHtml(member.batch)}</div>`
+      : '';
+    return `
+      <div class="team-card">
+        <div class="team-photo-wrap" style="position:relative;">
+          ${avatarHtml(member.photoFile, member.name, false)}
+        </div>
+        <div class="team-name">${escHtml(member.name)}</div>
+        <div class="team-role">${escHtml(member.role)}</div>
+        ${batchHtml}
+      </div>
+    `;
+  }).join('');
+}
+
+/* ── BTS Gallery ────────────────────────────────────────────── */
+function initBtsGallery() {
+  const reel = document.getElementById('bts-reel');
+  const btnLeft = document.getElementById('bts-left');
+  const btnRight = document.getElementById('bts-right');
+  if (!reel) return;
+
+  const scrollAmt = 340;
+  btnLeft.addEventListener('click', () => reel.scrollBy({ left: -scrollAmt, behavior: 'smooth' }));
+  btnRight.addEventListener('click', () => reel.scrollBy({ left: scrollAmt, behavior: 'smooth' }));
+
+  // Drag to scroll
+  let isDown = false, startX, scrollLeft;
+  reel.addEventListener('mousedown', e => {
+    isDown = true;
+    reel.classList.add('dragging');
+    startX = e.pageX - reel.offsetLeft;
+    scrollLeft = reel.scrollLeft;
+  });
+  reel.addEventListener('mouseleave', () => { isDown = false; reel.classList.remove('dragging'); });
+  reel.addEventListener('mouseup', () => { isDown = false; reel.classList.remove('dragging'); });
+  reel.addEventListener('mousemove', e => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - reel.offsetLeft;
+    reel.scrollLeft = scrollLeft - (x - startX) * 1.5;
+  });
+}
+
+/* ── Mobile Nav ─────────────────────────────────────────────── */
+function initMobileNav() {
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobile-nav');
+  if (!hamburger || !mobileNav) return;
+
+  hamburger.addEventListener('click', () => {
+    const open = mobileNav.classList.toggle('open');
+    hamburger.classList.toggle('open', open);
+    hamburger.setAttribute('aria-expanded', open);
+  });
+
+  // Close on link click
+  mobileNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      hamburger.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', false);
+    });
+  });
+}
+
+/* ── Navbar Scroll Behavior ─────────────────────────────────── */
+function initNavbarScroll() {
+  const navbar = document.getElementById('navbar');
+  if (!navbar) return;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 10) {
+      navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.08)';
+    } else {
+      navbar.style.boxShadow = '';
+    }
+  }, { passive: true });
+}
+
+/* ── Container Scroll Animation (Aceternity) ─────────────────── */
+function initContainerScroll() {
+  const card = document.getElementById('featured-scroll-card');
+  if (!card) return;
+
+  function update() {
+    const rect = card.getBoundingClientRect();
+    const wH = window.innerHeight;
+    // 0 when card top is at viewport bottom → 1 when card is 70% into viewport
+    const progress = Math.max(0, Math.min(1, (wH - rect.top) / (wH * 0.75)));
+    const rotateX = 18 * (1 - progress);
+    const scale = 1 + 0.04 * (1 - progress);
+    card.style.transform = `rotateX(${rotateX}deg) scale(${scale})`;
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  update();
+}
+
+/* ── Footer Fade Animation (efferd) ─────────────────────────── */
+function initFooterFade() {
+  const items = document.querySelectorAll('.footer-fade');
+  if (!items.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const delay = parseFloat(entry.target.dataset.delay || 0);
+        setTimeout(() => entry.target.classList.add('visible'), delay * 1000);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  items.forEach(item => observer.observe(item));
+}
+
+/* ── Init ────────────────────────────────────────────────────── */
+document.addEventListener('DOMContentLoaded', () => {
+  renderEpisodes();
+  renderGuests();
+  renderTeamGroup(typeof coreTeam !== 'undefined' ? coreTeam : [], 'core-team-grid');
+  renderTeamGroup(typeof members !== 'undefined' ? members : [], 'members-grid');
+  initBtsGallery();
+  initMobileNav();
+  initNavbarScroll();
+  initContainerScroll();
+  initFooterFade();
+});
+</script>
+
+</body>
+</html>

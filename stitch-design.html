@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>GNLU Obiter - Redesign</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style data-purpose="custom-fonts">
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            obiter: {
+              black: '#0a0a0a',
+              darkgray: '#171717',
+              gray: '#262626',
+              lightgray: '#a3a3a3',
+              blue: '#1d4ed8',
+              blue_hover: '#1e40af',
+              yellow: '#eab308',
+              white: '#f5f5f5'
+            }
+          },
+          backgroundImage: {
+            'hero-glow': 'radial-gradient(circle at 30% 30%, rgba(29, 78, 216, 0.4) 0%, rgba(29, 78, 216, 0) 60%)',
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-utilities">
+    /* Hide scrollbar for clean look in logo marquee if needed */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  </style>
+</head>
+<body class="bg-obiter-black text-obiter-white antialiased selection:bg-obiter-blue selection:text-white">
+<!-- BEGIN: Main Header -->
+<header class="fixed w-full top-0 z-50 bg-obiter-black/80 backdrop-blur-md border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<!-- Logo -->
+<a class="text-xl font-bold tracking-tight text-white flex items-center gap-2" href="#">
+<span class="text-obiter-blue">GNLU</span> Obiter
+      </a>
+<!-- Navigation -->
+<nav class="hidden md:flex items-center gap-8 text-sm font-medium text-obiter-lightgray">
+<a class="hover:text-white transition-colors" href="#">Episodes</a>
+<a class="hover:text-white transition-colors" href="#">Journal</a>
+<a class="hover:text-white transition-colors" href="#">Team</a>
+<a class="hover:text-white transition-colors" href="#">About</a>
+</nav>
+<!-- CTA -->
+<div class="flex items-center gap-4">
+<button class="hidden md:block text-white hover:text-obiter-blue transition-colors">
+<svg fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><circle cx="11" cy="11" r="8"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg>
+</button>
+<a class="bg-obiter-white text-obiter-black px-5 py-2.5 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors flex items-center gap-2 group" href="#">
+          Subscribe
+          <svg class="text-obiter-blue group-hover:translate-x-1 transition-transform" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+</div>
+</header>
+<!-- END: Main Header -->
+<main>
+<!-- BEGIN: Hero Section -->
+<section class="relative min-h-[90vh] flex items-center pt-24 pb-12 overflow-hidden rounded-b-[3rem] bg-obiter-darkgray">
+<!-- Background Glow & Image setup -->
+<div class="absolute inset-0 z-0">
+<!-- Professional blue glow -->
+<div class="absolute inset-0 bg-gradient-to-br from-[#1e40af]/80 via-[#1d4ed8]/40 to-obiter-darkgray mix-blend-screen opacity-80"></div>
+<!-- Moody Law Image (Placeholder) -->
+<img alt="Abstract Law Background" class="absolute right-0 top-0 h-full w-2/3 object-cover object-left opacity-30 mix-blend-overlay mix-blend-luminosity grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuABdrD72mgpQYZf9ab6nNZkwN3GJUemoL4vudKwAF_m1u9hxRBS8jtxJco1nAzRHIfe3sNNrH62hElEk4JlHvzbqRm2FhqQgq1nc2y-GcjF9CdQMtw4KLfwvS7tq6aF-_HItr9yoOmXcrWfa8xUESKoJYF6e-C-I32x0OXoOmRwL9q-zgXkyyMVjqzRmhvxrdUbiMU73D0EQAOnt6MibusC3firUtKuIjUDanEwGgGQF9vXc-0rHAjbEo8Vjflpfxmn1DF3OTvRP5w"/>
+<div class="absolute inset-0 bg-gradient-to-t from-obiter-darkgray via-transparent to-transparent"></div>
+<div class="absolute inset-0 bg-gradient-to-r from-obiter-darkgray via-obiter-darkgray/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 w-full flex flex-col justify-between h-full min-h-[60vh]">
+<!-- Top Hero Content -->
+<div class="flex flex-col lg:flex-row items-start justify-between mt-12 gap-12">
+<!-- Headlines -->
+<div class="max-w-3xl">
+<h2 class="text-obiter-yellow font-semibold tracking-wide text-lg mb-4 uppercase">GNLU Obiter Podcast</h2>
+<h1 class="text-6xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.9] text-white">
+              GNLU Obiter —<br/>The Law Podcast
+            </h1>
+</div>
+<!-- Description & CTAs -->
+<div class="max-w-md lg:mt-24">
+<p class="text-xl md:text-2xl font-medium leading-snug mb-4 text-white">
+              Rigorous legal discourse meets modern practice.
+            </p>
+<p class="text-obiter-lightgray text-sm md:text-base mb-8">
+              Dive into profound discussions, bridging the gap between traditional scholarship and modern practice. Join leading academics and practitioners as they dissect contemporary legal challenges.
+            </p>
+<div class="flex flex-wrap items-center gap-4">
+<a class="bg-obiter-blue text-white px-6 py-3 rounded-full font-semibold hover:bg-obiter-blue_hover transition-colors flex items-center gap-2" href="#">
+<svg fill="currentColor" height="20" stroke="none" viewbox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+                Watch on YouTube
+              </a>
+<a class="border border-white/20 text-white px-6 py-3 rounded-full font-semibold hover:bg-white/10 transition-colors" href="#">
+                Listen to Podcast
+              </a>
+</div>
+</div>
+</div>
+<!-- Bottom Stats/Topics Row -->
+<div class="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-white/10 pt-8">
+<div>
+<p class="text-obiter-yellow font-bold text-sm mb-1">#01</p>
+<p class="text-obiter-lightgray text-sm font-medium">Antitrust Law</p>
+</div>
+<div>
+<p class="text-obiter-yellow font-bold text-sm mb-1">#02</p>
+<p class="text-obiter-lightgray text-sm font-medium">Constitutionalism</p>
+</div>
+<div>
+<p class="text-obiter-yellow font-bold text-sm mb-1">#03</p>
+<p class="text-obiter-lightgray text-sm font-medium">Arbitration</p>
+</div>
+<div>
+<p class="text-obiter-yellow font-bold text-sm mb-1">#04</p>
+<p class="text-obiter-lightgray text-sm font-medium">Tech Regulation</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Hero Section -->
+<!-- BEGIN: Platform Logos Section -->
+<section class="py-12 bg-obiter-black border-b border-white/5">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-8">
+<p class="text-sm font-semibold text-obiter-lightgray whitespace-nowrap">Available on Major Platforms</p>
+<div class="flex items-center gap-12 overflow-x-auto no-scrollbar w-full md:w-auto opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<!-- Placeholder Logos using text for simplicity in this prompt -->
+<div class="flex items-center gap-2 font-bold text-xl"><svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.24 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.84.24 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.621.539.3.719 1.02.419 1.56-.239.54-.959.72-1.559.3z"></path></svg> Spotify</div>
+<div class="flex items-center gap-2 font-bold text-xl"><svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8zm-2-11.5v7l6-3.5-6-3.5z"></path></svg> YouTube</div>
+<div class="flex items-center gap-2 font-bold text-xl"><svg fill="currentColor" height="24" viewbox="0 0 24 24" width="24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm3.895 16.895c-.394.395-1.034.395-1.428 0l-3.182-3.182c-.189-.189-.285-.436-.285-.683V7c0-.552.448-1 1-1s1 .448 1 1v5.586l2.895 2.895c.395.394.395 1.034 0 1.414z"></path></svg> Apple</div>
+<div class="flex items-center gap-2 font-bold text-xl">Google Podcasts</div>
+</div>
+</div>
+</section>
+<!-- END: Platform Logos Section -->
+<!-- BEGIN: Mission / About Section -->
+<section class="py-24 bg-obiter-black">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row justify-between items-start gap-16">
+<div class="md:w-1/2">
+<h3 class="text-obiter-yellow font-semibold mb-6">Behind the Research</h3>
+<h2 class="text-5xl md:text-6xl font-bold tracking-tight leading-tight text-white">
+              Cultivating Space for Academic Inquiry
+            </h2>
+</div>
+<div class="md:w-1/2 md:mt-12">
+<blockquote class="text-2xl text-obiter-lightgray font-serif italic mb-8 border-l-2 border-obiter-blue pl-6 py-2">
+              "Our mission is to cultivate a space where rigorous academic inquiry meets practical legal reality, fostering a nuanced understanding of jurisprudence for scholars and practitioners alike."
+            </blockquote>
+<div class="flex items-center gap-6">
+<div class="text-sm text-obiter-lightgray">
+<p>Join the Discourse</p>
+<p>Submit your research</p>
+</div>
+<a class="bg-obiter-white text-obiter-black px-6 py-3 rounded-full text-sm font-semibold hover:bg-gray-200 transition-colors flex items-center gap-2 group" href="#">
+                Contribute
+                <svg class="text-obiter-blue group-hover:translate-x-1 transition-transform" fill="none" height="16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><line x1="5" x2="19" y1="12" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: Mission / About Section -->
+<!-- BEGIN: Latest Episodes Grid -->
+<section class="py-24 bg-obiter-black">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex justify-between items-end mb-12 border-b border-white/10 pb-6">
+<h2 class="text-4xl font-bold text-white tracking-tight">Latest Episodes</h2>
+<a class="text-sm font-bold text-obiter-blue hover:text-white uppercase tracking-wider transition-colors" href="#">View All</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Episode Card 1 -->
+<article class="group cursor-pointer">
+<div class="aspect-video bg-obiter-gray rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Microphone" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzbQvOF7kFvAIBcFu-Do6UlespGBBWnbnNFiafutp0ivm6dRSJRH870j1AIes8GkeLkbGeXsmReJikGwUv9-9QJT5YfgSiNuI8yp-9g_RS6cNoA72_og_o7CoZB_3kfbzm8S7NxuQwu9Na2XorFpkkXy1Rp1mRwK_NHdBFckMHhZomFJSpg-uvYZ42McKlaqtbmVwykErFVpGa8uYeT1AC6e4m_y0UUAQr9kAVCGijUUyr4psSghqzadroWUdblMMdOhTaP4oC5UI"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+<!-- Play Button Overlay -->
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="w-16 h-16 bg-obiter-blue rounded-full flex items-center justify-center text-white pl-1 shadow-lg">
+<svg fill="currentColor" height="32" stroke="none" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="text-xs font-bold px-2 py-1 border border-obiter-yellow text-obiter-yellow rounded-sm">EP 42</span>
+<span class="text-xs font-medium text-obiter-lightgray uppercase tracking-wider">Oct 12, 2024</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2 leading-snug group-hover:text-obiter-blue transition-colors">The Future of Antitrust in the Digital Age</h3>
+<p class="text-sm text-obiter-lightgray line-clamp-2">An in-depth analysis of emerging regulatory frameworks concerning big tech monopolies and the shifting landscape of competition law.</p>
+</article>
+<!-- Episode Card 2 -->
+<article class="group cursor-pointer">
+<div class="aspect-video bg-obiter-gray rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Gavel and Books" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXEhk2Us2W2sPw3l1gQqL94ZiuSh8xFOJ6hl6PZVK3CU42N0Y4Pioj6-R-UBzfgYTG5k7EKkvz4yymDSFg6FifpCd3pOolAKfEz8svRut3wMcfS_4YAlOQTjLyldN1Mj-yaan6MMsNLASA-AWhMxcL6g5hlgql22gdJWeH84HN_w5GklUHo79JxstyACyutj-L_foL0Etj-WrJenvg25xt7lvOKYhqbohgjp3EMMmHCdjGBwexZMDzGhXGfYs4jJtWhyPku9MSpis"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="w-16 h-16 bg-obiter-blue rounded-full flex items-center justify-center text-white pl-1 shadow-lg">
+<svg fill="currentColor" height="32" stroke="none" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="text-xs font-bold px-2 py-1 border border-obiter-yellow text-obiter-yellow rounded-sm">EP 41</span>
+<span class="text-xs font-medium text-obiter-lightgray uppercase tracking-wider">Sep 28, 2024</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2 leading-snug group-hover:text-obiter-blue transition-colors">Constitutional Interpretation &amp; Originalism</h3>
+<p class="text-sm text-obiter-lightgray line-clamp-2">Debating the merits and limitations of originalist doctrine in contemporary constitutional adjudication with leading scholars.</p>
+</article>
+<!-- Episode Card 3 -->
+<article class="group cursor-pointer">
+<div class="aspect-video bg-obiter-gray rounded-2xl overflow-hidden mb-6 relative">
+<img alt="Legal Documents" class="w-full h-full object-cover grayscale group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMqT-IaPnrRe8hv5LThIcOAWQB6z3ck9lMJBQn2rBnaQPbOb2p8Lf5kJUXANeT2RmO-xUsR1cY84m6jsGy6oUzYO_e6imKeY1tkYrw0AGq76WGXPurqYGrjckIX9dVk9hQbdmuXnso4tsr1RZ8b17BNe-06a0f9ZSlFeW0LbFCz7Vjj5YI8pvqKXeY_CgEAo0oGPJw3PeD_UysxxxkzGFrSjFKVPQx7Be_nW3NVTiSRa21gI9WzpPZ0PquAGNShbkqb4iovbP0oI4"/>
+<div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500"></div>
+<div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+<div class="w-16 h-16 bg-obiter-blue rounded-full flex items-center justify-center text-white pl-1 shadow-lg">
+<svg fill="currentColor" height="32" stroke="none" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3 mb-3">
+<span class="text-xs font-bold px-2 py-1 border border-obiter-yellow text-obiter-yellow rounded-sm">EP 40</span>
+<span class="text-xs font-medium text-obiter-lightgray uppercase tracking-wider">Sep 14, 2024</span>
+</div>
+<h3 class="text-xl font-bold text-white mb-2 leading-snug group-hover:text-obiter-blue transition-colors">International Arbitration Paradigms</h3>
+<p class="text-sm text-obiter-lightgray line-clamp-2">Exploring cross-border dispute resolution mechanisms and the evolving landscape of international commercial arbitration.</p>
+</article>
+</div>
+</div>
+</section>
+<!-- END: Latest Episodes Grid -->
+</main>
+<!-- BEGIN: Footer -->
+<footer class="bg-obiter-darkgray border-t border-white/5 py-16">
+<div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-start gap-12">
+<!-- Brand & Copyright -->
+<div>
+<a class="text-3xl font-bold tracking-tight text-white flex items-center gap-2 mb-4" href="#">
+<span class="text-obiter-blue font-serif italic">GNLU</span> Obiter
+        </a>
+<p class="text-sm text-obiter-lightgray font-medium">
+          © 2024 GNLU Obiter Journal &amp; Podcast.<br/>
+          All intellectual rights reserved.
+        </p>
+</div>
+<!-- Links -->
+<div class="flex gap-16 text-sm font-semibold text-white">
+<div class="flex flex-col gap-4">
+<a class="hover:text-obiter-blue transition-colors border-b border-white/20 pb-1 w-max" href="#">Archive</a>
+<a class="hover:text-obiter-blue transition-colors border-b border-white/20 pb-1 w-max" href="#">Submissions</a>
+</div>
+<div class="flex flex-col gap-4">
+<a class="hover:text-obiter-blue transition-colors border-b border-white/20 pb-1 w-max" href="#">Legal Notice</a>
+<a class="hover:text-obiter-blue transition-colors border-b border-white/20 pb-1 w-max" href="#">Contact Us</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+</body></html>
