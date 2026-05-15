@@ -141,7 +141,7 @@ const members = [
     photoFile: "team_prisha.jpg"
   },
   {
-    name: "Siddharth Prasad",
+    name: "Siddharth Dev Prasad",
     role: "Member",
     batch: "Batch 2023–2028",
     photoFile: "team_siddharth.jpg"

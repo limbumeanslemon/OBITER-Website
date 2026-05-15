@@ -898,7 +898,7 @@ function initBtsGallery() {
   btnLeft.addEventListener('click', () => reel.scrollBy({ left: -scrollAmt, behavior: 'smooth' }));
   btnRight.addEventListener('click', () => reel.scrollBy({ left: scrollAmt, behavior: 'smooth' }));
 
-  // Drag to scroll
+  // Drag to scroll (mouse)
   let isDown = false, startX, scrollLeft;
   reel.addEventListener('mousedown', e => {
     isDown = true;
@@ -914,6 +914,17 @@ function initBtsGallery() {
     const x = e.pageX - reel.offsetLeft;
     reel.scrollLeft = scrollLeft - (x - startX) * 1.5;
   });
+
+  // Touch scroll support
+  let touchStartX = 0, touchScrollLeft = 0;
+  reel.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].pageX;
+    touchScrollLeft = reel.scrollLeft;
+  }, { passive: true });
+  reel.addEventListener('touchmove', e => {
+    const dx = touchStartX - e.touches[0].pageX;
+    reel.scrollLeft = touchScrollLeft + dx;
+  }, { passive: true });
 }
 
 /* ── Mobile Nav ─────────────────────────────────────────────── */
@@ -1121,7 +1132,7 @@ function initContainerScroll() {
   function update() {
     raf = null;
     const wh = window.innerHeight;
-    const isMob = window.innerWidth <= 768;
+    const isMob = window.innerWidth <= 900;
 
     sections.forEach(section => {
       const card = section.querySelector('.cs-card');
@@ -1131,12 +1142,14 @@ function initContainerScroll() {
       const rect = section.getBoundingClientRect();
       const progress = Math.max(0, Math.min(1, (wh - rect.top) / (wh * 0.75)));
 
-      const rotate = 20 * (1 - progress);
-      const s0 = isMob ? 0.78 : 1.05;
-      const s1 = isMob ? 0.95 : 1.00;
-      const scale = s0 + (s1 - s0) * progress;
-
-      card.style.transform = `rotateX(${rotate}deg) scale(${scale})`;
+      if (isMob) {
+        // No 3D transform on mobile — prevents horizontal overflow
+        card.style.transform = '';
+      } else {
+        const rotate = 20 * (1 - progress);
+        const scale = 1.05 + (1.00 - 1.05) * progress;
+        card.style.transform = `rotateX(${rotate}deg) scale(${scale})`;
+      }
       if (header) header.style.opacity = 0.4 + 0.6 * progress;
     });
   }
