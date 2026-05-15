@@ -131,25 +131,25 @@ const members = [
   {
     name: "Jhalak Singh",
     role: "Member",
-    batch: "",
+    batch: "Batch 2023–2028",
     photoFile: "team_jhalak.jpg"
   },
   {
     name: "Prisha Mehta",
     role: "Member",
-    batch: "",
+    batch: "Batch 2023–2028",
     photoFile: "team_prisha.jpg"
   },
   {
     name: "Siddharth Prasad",
     role: "Member",
-    batch: "",
+    batch: "Batch 2023–2028",
     photoFile: "team_siddharth.jpg"
   },
   {
     name: "Veer Shah",
     role: "Member",
-    batch: "",
+    batch: "Batch 2023–2028",
     photoFile: "team_veer.jpg"
   },
   {
@@ -161,37 +161,37 @@ const members = [
   {
     name: "Hitesh Thoria",
     role: "Member",
-    batch: "",
+    batch: "Batch 2024–2029",
     photoFile: "team_hitesh.jpg"
   },
   {
     name: "Megha Chhari",
     role: "Member",
-    batch: "",
+    batch: "Batch 2024–2029",
     photoFile: "team_megha.jpg"
   },
   {
     name: "Prisha Shah",
     role: "Member",
-    batch: "",
+    batch: "Batch 2024–2029",
     photoFile: "team_prishashah.jpg"
   },
   {
     name: "Reedhav Gulati",
     role: "Member",
-    batch: "",
+    batch: "Batch 2024–2029",
     photoFile: "team_reedhav.jpg"
   },
   {
     name: "Sakshi Choudhary",
     role: "Member",
-    batch: "",
+    batch: "Batch 2024–2029",
     photoFile: "team_sakshi.jpg"
   },
   {
     name: "Tamanna Soni",
     role: "Member",
-    batch: "",
+    batch: "Batch 2024–2029",
     photoFile: "team_tamanna.jpg"
   },
   {
@@ -203,31 +203,31 @@ const members = [
   {
     name: "Devasya Sharma",
     role: "Member",
-    batch: "",
+    batch: "Batch 2025–2030",
     photoFile: "team_devasya.jpg"
   },
   {
     name: "Diksha Lal",
     role: "Member",
-    batch: "",
+    batch: "Batch 2025–2030",
     photoFile: "team_diksha.jpg"
   },
   {
     name: "Disha Joshi",
     role: "Member",
-    batch: "",
+    batch: "Batch 2025–2030",
     photoFile: "team_disha.jpg"
   },
   {
     name: "Kanishka Ajwani",
     role: "Member",
-    batch: "",
+    batch: "Batch 2025–2030",
     photoFile: "team_kanishka.jpg"
   },
   {
     name: "Soham Gupta",
     role: "Member",
-    batch: "",
+    batch: "Batch 2025–2030",
     photoFile: "team_soham.jpg"
   }
 ];

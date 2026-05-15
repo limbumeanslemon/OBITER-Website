@@ -18,6 +18,8 @@
     <div class="navbar-inner">
 
       <a href="#home" class="navbar-logo">
+        <img src="Gujarat_National_Law_University_Logo.png" alt="Gujarat National Law University"
+             onerror="this.style.display='none'" class="navbar-gnlu-logo" />
         <img src="podcastlogo.png" alt="GNLU Obiter Logo"
              onerror="this.style.display='none'" />
         <div class="navbar-logo-text">
@@ -66,14 +68,6 @@
      HERO — split layout (21st.dev Magic redesign)
 ════════════════════════════════════════════════════════════ -->
 <section class="hero" id="home">
-  <div class="hero-blobs" aria-hidden="true">
-    <div class="hero-blob hero-blob-1"></div>
-    <div class="hero-blob hero-blob-2"></div>
-    <div class="hero-blob hero-blob-3"></div>
-    <div class="hero-blob hero-blob-4"></div>
-    <div class="hero-blob hero-blob-5"></div>
-    <div class="hero-blob hero-blob-interactive" id="hero-blob-interactive"></div>
-  </div>
   <div class="container">
     <div class="hero-split">
 
@@ -157,7 +151,7 @@
 <!-- ═══════════════════════════════════════════════════════════
      ABOUT STRIP
 ════════════════════════════════════════════════════════════ -->
-<section class="about-strip bg-dot-grid">
+<section class="about-strip">
   <div class="container">
     <div class="about-strip-inner">
       <div>
@@ -174,53 +168,49 @@
 <!-- ═══════════════════════════════════════════════════════════
      FEATURED EPISODE
 ════════════════════════════════════════════════════════════ -->
-<section class="featured" id="featured">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="section-label blue" style="margin-bottom:6px;">Latest Release</div>
-        <h2>Now Playing</h2>
-      </div>
-      <a href="#episodes" class="section-label blue" style="font-size:12px; text-transform:uppercase; letter-spacing:0.12em;">
-        View All Episodes →
-      </a>
+<section class="featured" id="featured" data-cs-section>
+  <div class="cs-inner">
+    <div class="cs-header">
+      <div class="section-label blue" style="margin-bottom:6px;">Latest Release</div>
+      <h2>Now Playing</h2>
+      <a href="#episodes" class="cs-view-all">View All Episodes →</a>
     </div>
+    <div class="cs-card" id="featured-card">
+      <div class="cs-card-inner">
+        <div class="featured-guest-info">
+          <div class="featured-ep-badge">Episode 10 · Now Playing</div>
+          <h3 class="featured-title">Sr. Adv. Gourab Banerji — Supreme Court of India</h3>
+          <p class="featured-designation">Senior Advocate, Supreme Court of India · President, Arbitration Bar of India</p>
+        </div>
 
-    <div class="featured-card" id="featured-card">
-      <div class="featured-guest-info">
-        <div class="featured-ep-badge">Episode 10 · Now Playing</div>
-        <h3 class="featured-title">Sr. Adv. Gourab Banerji — Supreme Court of India</h3>
-        <p class="featured-designation">Senior Advocate, Supreme Court of India · President, Arbitration Bar of India</p>
-      </div>
-
-      <div class="featured-embeds">
-        <div class="embed-block">
-          <div class="embed-part-label">Part 1 of 2 — Lessons from Fali, Jaitley, Rohinton &amp; Courtroom</div>
-          <div class="video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/2lM-FbyXvWo"
-              title="Sr. Adv. Gourab Banerji — Part 1"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy">
-            </iframe>
+        <div class="featured-embeds">
+          <div class="embed-block">
+            <div class="embed-part-label">Part 1 of 2 — Lessons from Fali, Jaitley, Rohinton &amp; Courtroom</div>
+            <div class="video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/2lM-FbyXvWo"
+                title="Sr. Adv. Gourab Banerji — Part 1"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+          </div>
+          <div class="embed-block">
+            <div class="embed-part-label">Part 2 of 2 — First Day at Supreme Court, International Arbitration &amp; Views on Life</div>
+            <div class="video-wrap">
+              <iframe
+                src="https://www.youtube.com/embed/wslQ1h5CK_M"
+                title="Sr. Adv. Gourab Banerji — Part 2"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
           </div>
         </div>
-        <div class="embed-block">
-          <div class="embed-part-label">Part 2 of 2 — First Day at Supreme Court, International Arbitration &amp; Views on Life</div>
-          <div class="video-wrap">
-            <iframe
-              src="https://www.youtube.com/embed/wslQ1h5CK_M"
-              title="Sr. Adv. Gourab Banerji — Part 2"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy">
-            </iframe>
-          </div>
-        </div>
       </div>
-    </div><!-- /featured-card -->
-
+    </div><!-- /cs-card -->
   </div>
 </section>
 
@@ -235,10 +225,8 @@
         <h2>Episodes Archive</h2>
       </div>
     </div>
-    <div class="episodes-scroll-container">
-      <div class="episodes-grid" id="episodes-grid">
-        <!-- Rendered by episodes.js + JS below -->
-      </div>
+    <div class="episodes-grid" id="episodes-grid">
+      <!-- Rendered by episodes.js + JS below -->
     </div>
   </div>
 </section>
@@ -246,16 +234,18 @@
 <!-- ═══════════════════════════════════════════════════════════
      GUEST DIRECTORY
 ════════════════════════════════════════════════════════════ -->
-<section class="guests-section bg-dot-grid" id="guests">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="section-label" style="margin-bottom:6px;">Our Guests</div>
-        <h2>Guest Directory</h2>
-      </div>
+<section class="guests-section bg-dot-grid" id="guests" data-cs-section>
+  <div class="cs-inner">
+    <div class="cs-header">
+      <div class="section-label" style="margin-bottom:6px;">Our Guests</div>
+      <h2>Guest Directory</h2>
     </div>
-    <div class="guests-grid" id="guests-grid">
-      <!-- Rendered by team.js + JS below -->
+    <div class="cs-card">
+      <div class="cs-card-inner">
+        <div class="guests-grid" id="guests-grid">
+          <!-- Rendered by team.js + JS below -->
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -342,23 +332,34 @@
 <!-- ═══════════════════════════════════════════════════════════
      TEAM
 ════════════════════════════════════════════════════════════ -->
-<section class="team-section bg-dot-grid" id="team">
-  <div class="container">
-    <div class="section-header">
-      <div>
-        <div class="section-label" style="margin-bottom:6px;">The People Behind the Mic</div>
-        <h2>Our Team</h2>
+<section class="team-section bg-dot-grid" id="team" data-cs-section>
+  <div class="cs-inner">
+    <div class="cs-header">
+      <div class="section-label" style="margin-bottom:6px;">The People Behind the Mic</div>
+      <h2>Our Team</h2>
+    </div>
+    <div class="cs-card">
+      <div class="cs-card-inner">
+
+        <div class="team-group-label">Core Team</div>
+        <div class="team-grid" id="core-team-grid"><!-- Rendered by JS --></div>
+
+        <div class="team-batch-divider">
+          <div class="team-batch-year">Batch 2023 – 2028</div>
+          <div class="team-grid" id="members-grid-2023"><!-- Rendered by JS --></div>
+        </div>
+
+        <div class="team-batch-divider">
+          <div class="team-batch-year">Batch 2024 – 2029</div>
+          <div class="team-grid" id="members-grid-2024"><!-- Rendered by JS --></div>
+        </div>
+
+        <div class="team-batch-divider">
+          <div class="team-batch-year">Batch 2025 – 2030</div>
+          <div class="team-grid" id="members-grid-2025"><!-- Rendered by JS --></div>
+        </div>
+
       </div>
-    </div>
-
-    <div class="team-group-label">Core Team</div>
-    <div class="team-grid" id="core-team-grid">
-      <!-- Rendered by JS -->
-    </div>
-
-    <div class="team-group-label">Members</div>
-    <div class="team-grid" id="members-grid">
-      <!-- Rendered by JS -->
     </div>
   </div>
 </section>
@@ -508,6 +509,12 @@
 
       <!-- Brand column -->
       <div class="footer-brand footer-fade" data-delay="0">
+        <div class="footer-brand-logos">
+          <img src="Gujarat_National_Law_University_Logo.png" alt="Gujarat National Law University"
+               class="footer-gnlu-logo" onerror="this.style.display='none'" />
+          <img src="podcastlogo.png" alt="GNLU Obiter"
+               class="footer-podcast-logo" onerror="this.style.display='none'" />
+        </div>
         <div class="footer-brand-name"><span>GNLU</span> Obiter</div>
         <p class="footer-tagline">
           Judges, senior advocates, global academics, and diplomats, on the work, ethics, and craft of law.
@@ -654,8 +661,9 @@
 function getInitials(name) {
   return name
     .replace(/^(Prof\.|Dr\.|Sr\.|Adv\.|Shri|Justice|H\.E\.|His Excellency|Retd\.)\s+/gi, '')
+    .replace(/\([^)]*\)\s*/g, '')
     .split(' ')
-    .filter(w => w.length > 1)
+    .filter(w => w.length > 1 && /^[A-Za-z]/.test(w))
     .slice(0, 2)
     .map(w => w[0].toUpperCase())
     .join('');
@@ -692,7 +700,7 @@ function renderEpisodes() {
   const grid = document.getElementById('episodes-grid');
   if (!grid || typeof episodes === 'undefined') return;
 
-  grid.innerHTML = episodes.map(ep => {
+  grid.innerHTML = [...episodes].reverse().map(ep => {
     const isComing = ep.comingSoon === true;
     const partLabel = ep.part
       ? `<span class="ep-part-badge">Part ${ep.part}/${ep.totalParts}</span>`
@@ -706,9 +714,9 @@ function renderEpisodes() {
     // YouTube thumbnail — links directly to YouTube
     const thumbHtml = ytId
       ? `<a href="${escHtml(ep.url)}" target="_blank" rel="noopener" class="ep-card-thumb" tabindex="-1" aria-hidden="true">
-           <img src="https://img.youtube.com/vi/${ytId}/mqdefault.jpg"
+           <img src="https://img.youtube.com/vi/${ytId}/hqdefault.jpg"
                 alt="${escHtml(ep.guestShort)}"
-                onerror="this.parentElement.style.display='none'" />
+                onerror="if(this.src.indexOf('mqdefault')===-1){this.src='https://img.youtube.com/vi/${ytId}/mqdefault.jpg'}else{this.parentElement.style.display='none'}" />
            <div class="ep-card-thumb-play">
              <div class="ep-card-thumb-play-icon">
                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
@@ -738,7 +746,7 @@ function renderEpisodes() {
       : '';
 
     return `
-      <article class="episode-card${isComing ? ' coming-soon' : ''}" data-glow>
+      <article class="episode-card${isComing ? ' coming-soon' : ''}" data-glow data-tilt>
         ${thumbHtml}
         <div class="ep-card-top">
           <span class="ep-badge">${numberStr}</span>
@@ -765,13 +773,15 @@ function renderGuests() {
   grid.innerHTML = guests.map((g, i) => {
     const num = String(i + 1).padStart(2, '0');
     return `
-      <div class="guest-card" data-glow>
-        <div class="guest-photo-wrap" style="position:relative;">
-          ${avatarHtml(g.photoFile, g.name, false)}
+      <div class="guest-card" data-glow data-tilt>
+        <div class="guest-photo-wrap">
+          ${avatarHtml(g.photoFile, g.name, true)}
         </div>
-        <div class="guest-number">Guest ${num}</div>
-        <div class="guest-name">${escHtml(g.name)}</div>
-        <div class="guest-designation">${escHtml(g.designation)}</div>
+        <div class="guest-card-info">
+          <div class="guest-number">Guest ${num}</div>
+          <div class="guest-name">${escHtml(g.name)}</div>
+          <div class="guest-designation">${escHtml(g.designation)}</div>
+        </div>
       </div>
     `;
   }).join('');
@@ -787,13 +797,15 @@ function renderTeamGroup(dataArr, containerId) {
       ? `<div class="team-batch">${escHtml(member.batch)}</div>`
       : '';
     return `
-      <div class="team-card" data-glow>
-        <div class="team-photo-wrap" style="position:relative;">
-          ${avatarHtml(member.photoFile, member.name, false)}
+      <div class="team-card" data-glow data-tilt>
+        <div class="team-photo-wrap">
+          ${avatarHtml(member.photoFile, member.name, true)}
         </div>
-        <div class="team-name">${escHtml(member.name)}</div>
-        <div class="team-role">${escHtml(member.role)}</div>
-        ${batchHtml}
+        <div class="team-card-info">
+          <div class="team-name">${escHtml(member.name)}</div>
+          <div class="team-role">${escHtml(member.role)}</div>
+          ${batchHtml}
+        </div>
       </div>
     `;
   }).join('');
@@ -914,62 +926,143 @@ function initEpisodeReveal() {
   document.querySelectorAll('.episode-card').forEach(card => observer.observe(card));
 }
 
-/* ── Hero Interactive Blob (bg.md inspired) ─────────────────── */
-function initHeroBlobs() {
-  const blob = document.getElementById('hero-blob-interactive');
-  const hero = document.querySelector('.hero');
-  if (!blob || !hero) return;
+/* ── Global Dot Grid (fixed canvas, full viewport) ───────────── */
+function initHeroGrid() {
+  const canvas = document.getElementById('hero-grid-canvas');
+  if (!canvas) return;
 
-  let curX = 0, curY = 0, tgX = 0, tgY = 0;
+  const ctx = canvas.getContext('2d');
+  const SPACING = 28, RADIUS = 1.5, GLOW_DIST = 140;
+  let mouseX = -9999, mouseY = -9999, rafPending = false;
 
-  function move() {
-    curX += (tgX - curX) / 20;
-    curY += (tgY - curY) / 20;
-    blob.style.transform = `translate(${Math.round(curX)}px, ${Math.round(curY)}px)`;
-    requestAnimationFrame(move);
+  function scheduleRedraw() {
+    if (!rafPending) { rafPending = true; requestAnimationFrame(draw); }
   }
 
-  hero.addEventListener('mousemove', (e) => {
-    const rect = hero.getBoundingClientRect();
-    tgX = e.clientX - rect.left - blob.offsetWidth / 2;
-    tgY = e.clientY - rect.top  - blob.offsetHeight / 2;
-  });
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    scheduleRedraw();
+  }
 
-  move();
+  function draw() {
+    rafPending = false;
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    const cols = Math.ceil(canvas.width / SPACING) + 1;
+    const rows = Math.ceil(canvas.height / SPACING) + 1;
+    for (let r = 0; r < rows; r++) {
+      for (let c = 0; c < cols; c++) {
+        const x = c * SPACING, y = r * SPACING;
+        const dist = Math.hypot(mouseX - x, mouseY - y);
+        const glow = Math.max(0, 1 - dist / GLOW_DIST);
+        let color;
+        if (glow > 0) {
+          color = (c + r) % 3 === 0
+            ? `rgba(255,222,89,${(0.04 + glow * 0.7).toFixed(3)})`
+            : `rgba(1,74,173,${(0.04 + glow * 0.8).toFixed(3)})`;
+        } else {
+          color = 'rgba(255,255,255,0.04)';
+        }
+        ctx.beginPath();
+        ctx.arc(x, y, RADIUS, 0, Math.PI * 2);
+        ctx.fillStyle = color;
+        ctx.fill();
+      }
+    }
+  }
+
+  window.addEventListener('mousemove', (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    scheduleRedraw();
+  });
+  window.addEventListener('mouseleave', () => { mouseX = -9999; mouseY = -9999; scheduleRedraw(); });
+  window.addEventListener('resize', resize, { passive: true });
+  resize();
 }
 
-/* ── Episodes Container Scroll (scroll.md adapted) ──────────── */
+/* ── 3D Tilt Cards (lerp spring, vanilla) ────────────────────── */
+function initTiltCards() {
+  const MAX_TILT = 12;
+  const LERP = 0.1;
+
+  function attachTilt(card) {
+    let tx = 0, ty = 0, cx = 0, cy = 0;
+    let rafId = null, hovering = false;
+
+    function loop() {
+      cx += (tx - cx) * LERP;
+      cy += (ty - cy) * LERP;
+      card.style.transform = `perspective(700px) rotateX(${cy}deg) rotateY(${cx}deg)`;
+      if (hovering || Math.abs(cx - tx) > 0.05 || Math.abs(cy - ty) > 0.05) {
+        rafId = requestAnimationFrame(loop);
+      } else {
+        card.style.transform = '';
+        rafId = null;
+      }
+    }
+
+    card.addEventListener('mouseenter', () => {
+      hovering = true;
+      if (!rafId) rafId = requestAnimationFrame(loop);
+    });
+    card.addEventListener('mousemove', e => {
+      const r = card.getBoundingClientRect();
+      const dx = (e.clientX - r.left) / r.width  - 0.5;
+      const dy = (e.clientY - r.top)  / r.height - 0.5;
+      tx = dx * MAX_TILT * 2;
+      ty = -dy * MAX_TILT * 2;
+    });
+    card.addEventListener('mouseleave', () => {
+      hovering = false;
+      tx = 0; ty = 0;
+      if (!rafId) rafId = requestAnimationFrame(loop);
+    });
+  }
+
+  document.querySelectorAll('[data-tilt]').forEach(card => {
+    card.setAttribute('data-tilt-init', '');
+    attachTilt(card);
+  });
+
+  // Re-run after dynamic content (guests/team rendered later)
+  const obs = new MutationObserver(() => {
+    document.querySelectorAll('[data-tilt]:not([data-tilt-init])').forEach(card => {
+      card.setAttribute('data-tilt-init', '');
+      attachTilt(card);
+    });
+  });
+  obs.observe(document.body, { childList: true, subtree: true });
+}
+
+/* ── Container Scroll (scroll.md adapted — featured + episodes) ─ */
 function initContainerScroll() {
-  const section = document.querySelector('.episodes-section');
-  const grid    = document.getElementById('episodes-grid');
-  if (!section || !grid) return;
+  const sections = document.querySelectorAll('[data-cs-section]');
+  if (!sections.length) return;
 
   let raf = null;
 
   function update() {
     raf = null;
-    const rect  = section.getBoundingClientRect();
-    const wh    = window.innerHeight;
+    const wh = window.innerHeight;
     const isMob = window.innerWidth <= 768;
 
-    // 0 = section top at bottom of viewport, 1 = section top at top of viewport
-    const progress = Math.max(0, Math.min(1, (wh - rect.top) / (wh * 0.75)));
+    sections.forEach(section => {
+      const card = section.querySelector('.cs-card');
+      const header = section.querySelector('.cs-header');
+      if (!card) return;
 
-    const rotate = 20 * (1 - progress);
-    const s0 = isMob ? 0.78 : 1.05;
-    const s1 = isMob ? 0.95 : 1.00;
-    const scale  = s0 + (s1 - s0) * progress;
+      const rect = section.getBoundingClientRect();
+      const progress = Math.max(0, Math.min(1, (wh - rect.top) / (wh * 0.75)));
 
-    grid.style.transform = `rotateX(${rotate}deg) scale(${scale})`;
+      const rotate = 20 * (1 - progress);
+      const s0 = isMob ? 0.78 : 1.05;
+      const s1 = isMob ? 0.95 : 1.00;
+      const scale = s0 + (s1 - s0) * progress;
 
-    if (progress < 0.99) {
-      const d = 1 - progress;
-      grid.style.boxShadow =
-        `0 ${Math.round(9*d)}px ${Math.round(20+30*d)}px rgba(0,0,0,${(0.35*d).toFixed(2)}),` +
-        `0 ${Math.round(37*d)}px ${Math.round(37*d)}px rgba(0,0,0,${(0.25*d).toFixed(2)})`;
-    } else {
-      grid.style.boxShadow = '';
-    }
+      card.style.transform = `rotateX(${rotate}deg) scale(${scale})`;
+      if (header) header.style.opacity = 0.4 + 0.6 * progress;
+    });
   }
 
   window.addEventListener('scroll', () => {
@@ -979,23 +1072,59 @@ function initContainerScroll() {
   update();
 }
 
+
+/* ── Stats Counter ───────────────────────────────────────────── */
+function initStatCounters() {
+  const items = document.querySelectorAll('[data-count]');
+  if (!items.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.count, 10);
+      const suffix = el.querySelector('.stat-suffix');
+      const suffixText = suffix ? suffix.outerHTML : '';
+      const duration = target > 1000 ? 1800 : 900;
+      const start = performance.now();
+
+      function tick(now) {
+        const p = Math.min((now - start) / duration, 1);
+        const eased = 1 - Math.pow(1 - p, 3);
+        el.innerHTML = Math.round(eased * target) + suffixText;
+        if (p < 1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      observer.unobserve(el);
+    });
+  }, { threshold: 0.6 });
+
+  items.forEach(el => observer.observe(el));
+}
+
 /* ── Init ────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
   renderEpisodes();
   renderGuests();
   renderTeamGroup(typeof coreTeam !== 'undefined' ? coreTeam : [], 'core-team-grid');
-  renderTeamGroup(typeof members !== 'undefined' ? members : [], 'members-grid');
+  if (typeof members !== 'undefined') {
+    renderTeamGroup(members.filter(m => m.batch === 'Batch 2023–2028'), 'members-grid-2023');
+    renderTeamGroup(members.filter(m => m.batch === 'Batch 2024–2029'), 'members-grid-2024');
+    renderTeamGroup(members.filter(m => m.batch === 'Batch 2025–2030'), 'members-grid-2025');
+  }
   initBtsGallery();
   initMobileNav();
   initNavbarScroll();
   initFooterFade();
   initGlowCards();
   initEpisodeReveal();
-  initHeroBlobs();
+  initHeroGrid();
   initContainerScroll();
+  initTiltCards();
 });
 </script>
 
 
+<canvas class="hero-grid-canvas" id="hero-grid-canvas" aria-hidden="true"></canvas>
 </body>
 </html>
