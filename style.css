@@ -1017,6 +1017,39 @@ p { line-height: 1.7; }
   box-shadow: 0 8px 32px rgba(1,74,173,0.3);
   transform: translateY(-3px);
 }
+/* LinkedIn click support */
+.guest-card.has-linkedin,
+.team-card.has-linkedin {
+  cursor: pointer;
+}
+.guest-card.has-linkedin:focus-visible,
+.team-card.has-linkedin:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+/* LinkedIn badge — top-right corner */
+.linkedin-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #0a66c2;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  pointer-events: none;
+}
+.has-linkedin:hover .linkedin-badge {
+  opacity: 1;
+  transform: scale(1);
+}
 .guest-photo-wrap {
   flex: 3;
   width: 100%;
@@ -1622,6 +1655,13 @@ p { line-height: 1.7; }
 
 /* Episode Watch button sizing */
 .btn-watch.btn-liquid {
+  padding: 8px 18px;
+  font-size: 13px;
+  gap: 6px;
+}
+
+/* Transcript button sizing — matches watch button */
+.btn-transcript.btn-liquid {
   padding: 8px 18px;
   font-size: 13px;
   gap: 6px;
