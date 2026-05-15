@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +7,9 @@
   <meta name="description" content="Judges, senior advocates, global academics, and diplomats on the work, ethics, and craft of law. A podcast by GNLU Research & Development Cell." />
   <link rel="icon" type="image/png" href="podcastlogo.png" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function(){var t=localStorage.getItem('obiter-theme')||'dark';document.documentElement.setAttribute('data-theme',t);})();
+  </script>
 </head>
 <body>
 
@@ -17,15 +20,19 @@
   <div class="container">
     <div class="navbar-inner">
 
-      <a href="#home" class="navbar-logo">
-        <img src="Gujarat_National_Law_University_Logo.png" alt="Gujarat National Law University"
-             onerror="this.style.display='none'" class="navbar-gnlu-logo" />
-        <img src="podcastlogo.png" alt="GNLU Obiter Logo"
-             onerror="this.style.display='none'" />
-        <div class="navbar-logo-text">
-          <span>GNLU</span> Obiter
-        </div>
-      </a>
+      <div class="navbar-logo">
+        <a href="https://www.gnlu.ac.in/GNLU/Home" target="_blank" rel="noopener" class="navbar-gnlu-link" aria-label="Visit GNLU website">
+          <img src="Gujarat_National_Law_University_Logo.png" alt="Gujarat National Law University"
+               onerror="this.style.display='none'" class="navbar-gnlu-logo" />
+        </a>
+        <a href="#home" class="navbar-logo-home">
+          <img src="podcastlogo.png" alt="GNLU Obiter Logo"
+               onerror="this.style.display='none'" />
+          <div class="navbar-logo-text">
+            <span>GNLU</span> Obiter
+          </div>
+        </a>
+      </div>
 
       <nav aria-label="Main navigation">
         <ul class="navbar-nav">
@@ -43,6 +50,10 @@
           </svg>
           Watch on YouTube
         </a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Switch to light mode">
+          <svg class="theme-toggle-icon theme-toggle-icon--sun" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+          <svg class="theme-toggle-icon theme-toggle-icon--moon" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
         <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
           <span></span><span></span><span></span>
         </button>
@@ -186,27 +197,37 @@
         <div class="featured-embeds">
           <div class="embed-block">
             <div class="embed-part-label">Part 1 of 2 — Lessons from Fali, Jaitley, Rohinton &amp; Courtroom</div>
-            <div class="video-wrap">
-              <iframe
-                src="https://www.youtube.com/embed/2lM-FbyXvWo"
-                title="Sr. Adv. Gourab Banerji — Part 1"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
+            <a class="video-thumb-link" href="https://www.youtube.com/watch?v=2lM-FbyXvWo" target="_blank" rel="noopener" aria-label="Watch Part 1 on YouTube">
+              <div class="video-wrap">
+                <img src="https://img.youtube.com/vi/2lM-FbyXvWo/maxresdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/2lM-FbyXvWo/hqdefault.jpg'"
+                     alt="Sr. Adv. Gourab Banerji — Part 1" loading="lazy" />
+                <div class="video-thumb-play">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="video-thumb-yt">
+                  <svg width="18" height="13" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5A3 3 0 0 0 21.4.4C19.5 0 12 0 12 0S4.5 0 2.6.4A3 3 0 0 0 .5 2.5C0 4.4 0 8.5 0 8.5s0 4.1.5 6A3 3 0 0 0 2.6 16.6C4.5 17 12 17 12 17s7.5 0 9.4-.4a3 3 0 0 0 2.1-2.1C24 12.6 24 8.5 24 8.5s0-4.1-.5-6zM9.5 12.1V4.9l6.3 3.6-6.3 3.6z"/></svg>
+                  Watch on YouTube
+                </div>
+              </div>
+            </a>
           </div>
           <div class="embed-block">
             <div class="embed-part-label">Part 2 of 2 — First Day at Supreme Court, International Arbitration &amp; Views on Life</div>
-            <div class="video-wrap">
-              <iframe
-                src="https://www.youtube.com/embed/wslQ1h5CK_M"
-                title="Sr. Adv. Gourab Banerji — Part 2"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-                loading="lazy">
-              </iframe>
-            </div>
+            <a class="video-thumb-link" href="https://www.youtube.com/watch?v=wslQ1h5CK_M" target="_blank" rel="noopener" aria-label="Watch Part 2 on YouTube">
+              <div class="video-wrap">
+                <img src="https://img.youtube.com/vi/wslQ1h5CK_M/maxresdefault.jpg"
+                     onerror="this.src='https://img.youtube.com/vi/wslQ1h5CK_M/hqdefault.jpg'"
+                     alt="Sr. Adv. Gourab Banerji — Part 2" loading="lazy" />
+                <div class="video-thumb-play">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+                </div>
+                <div class="video-thumb-yt">
+                  <svg width="18" height="13" viewBox="0 0 24 17" fill="currentColor"><path d="M23.5 2.5A3 3 0 0 0 21.4.4C19.5 0 12 0 12 0S4.5 0 2.6.4A3 3 0 0 0 .5 2.5C0 4.4 0 8.5 0 8.5s0 4.1.5 6A3 3 0 0 0 2.6 16.6C4.5 17 12 17 12 17s7.5 0 9.4-.4a3 3 0 0 0 2.1-2.1C24 12.6 24 8.5 24 8.5s0-4.1-.5-6zM9.5 12.1V4.9l6.3 3.6-6.3 3.6z"/></svg>
+                  Watch on YouTube
+                </div>
+              </div>
+            </a>
           </div>
         </div>
       </div>
@@ -809,6 +830,63 @@ function renderTeamGroup(dataArr, containerId) {
   }).join('');
 }
 
+/* ── Theme Toggle (curtain animation) ───────────────────────── */
+function initThemeToggle() {
+  const btn     = document.getElementById('theme-toggle');
+  const curtain = document.getElementById('theme-curtain');
+  if (!btn || !curtain) return;
+
+  const DURATION = 550;
+  const EASING   = 'cubic-bezier(0.76, 0, 0.24, 1)';
+  let animating  = false;
+
+  // Curtain colour = destination page background
+  const CURTAIN = { light: '#f9f9f9', dark: '#f9f9f9' };
+
+  function syncBtn(theme) {
+    btn.setAttribute('aria-label', theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  syncBtn(document.documentElement.getAttribute('data-theme') || 'dark');
+
+  btn.addEventListener('click', () => {
+    if (animating) return;
+    animating = true;
+
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next    = current === 'dark' ? 'light' : 'dark';
+
+    // Set curtain colour and reset position instantly
+    curtain.style.transition  = 'none';
+    curtain.style.background  = CURTAIN[next];
+    curtain.style.transformOrigin = 'top';
+    curtain.style.transform   = 'scaleY(0)';
+    curtain.offsetHeight; // force reflow
+
+    // Phase 1 — fall down
+    curtain.style.transition = `transform ${DURATION}ms ${EASING}`;
+    curtain.style.transform  = 'scaleY(1)';
+
+    setTimeout(() => {
+      // Switch theme while hidden behind curtain
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('obiter-theme', next);
+      syncBtn(next);
+
+      // Phase 2 — rise back up from bottom
+      curtain.style.transformOrigin = 'bottom';
+      curtain.style.transition = 'none';
+      curtain.style.transform  = 'scaleY(1)';
+      curtain.offsetHeight;
+
+      curtain.style.transition = `transform ${DURATION}ms ${EASING}`;
+      curtain.style.transform  = 'scaleY(0)';
+
+      setTimeout(() => { animating = false; }, DURATION + 60);
+    }, DURATION);
+  });
+}
+
 /* ── BTS Gallery ────────────────────────────────────────────── */
 function initBtsGallery() {
   const reel = document.getElementById('bts-reel');
@@ -1110,6 +1188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderTeamGroup(members.filter(m => m.batch === 'Batch 2024–2029'), 'members-grid-2024');
     renderTeamGroup(members.filter(m => m.batch === 'Batch 2025–2030'), 'members-grid-2025');
   }
+  initThemeToggle();
   initBtsGallery();
   initMobileNav();
   initNavbarScroll();
@@ -1124,5 +1203,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 <canvas class="hero-grid-canvas" id="hero-grid-canvas" aria-hidden="true"></canvas>
+<div id="theme-curtain" aria-hidden="true"></div>
 </body>
 </html>
