@@ -628,6 +628,7 @@ p { line-height: 1.7; }
   display: block;
   padding: 80px 24px 60px;
   position: relative;
+  overflow: clip; /* prevent rotateX 3D projection from inflating body height */
 }
 @media (min-width: 768px) {
   [data-cs-section] { padding: 80px 80px 60px; }
