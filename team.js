@@ -84,7 +84,7 @@ const coreTeam = [
     role: "Convenor",
     batch: "Batch 2023–2028",
     photoFile: "team_swayam.jpg",
-    linkedin: ""
+    linkedin: "https://in.linkedin.com/in/swayammehulshah"
   },
   {
     name: "Devansh Yadav",
