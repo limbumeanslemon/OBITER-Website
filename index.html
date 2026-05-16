@@ -510,6 +510,23 @@
   </div>
 </section>
 
+<!-- BTS Lightbox -->
+<div class="bts-lightbox" id="bts-lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="bts-lb-close" id="bts-lb-close" aria-label="Close">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="bts-lb-nav left" id="bts-lb-prev" aria-label="Previous photo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+  </button>
+  <div class="bts-lb-img-wrap">
+    <img class="bts-lb-img" id="bts-lb-img" src="" alt="" />
+  </div>
+  <button class="bts-lb-nav right" id="bts-lb-next" aria-label="Next photo">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+  </button>
+  <div class="bts-lb-counter" id="bts-lb-counter"></div>
+</div>
+
 <!-- ═══════════════════════════════════════════════════════════
      ABOUT GNLU
 ════════════════════════════════════════════════════════════ -->
@@ -933,9 +950,10 @@ function initBtsGallery() {
   btnRight.addEventListener('click', () => reel.scrollBy({ left: scrollAmt, behavior: 'smooth' }));
 
   // Drag to scroll (mouse)
-  let isDown = false, startX, scrollLeft;
+  let isDown = false, startX, scrollLeft, didDrag = false;
   reel.addEventListener('mousedown', e => {
     isDown = true;
+    didDrag = false;
     reel.classList.add('dragging');
     startX = e.pageX - reel.offsetLeft;
     scrollLeft = reel.scrollLeft;
@@ -946,7 +964,9 @@ function initBtsGallery() {
     if (!isDown) return;
     e.preventDefault();
     const x = e.pageX - reel.offsetLeft;
-    reel.scrollLeft = scrollLeft - (x - startX) * 1.5;
+    const walk = x - startX;
+    if (Math.abs(walk) > 5) didDrag = true;
+    reel.scrollLeft = scrollLeft - walk * 1.5;
   });
 
   // Touch scroll support
@@ -959,6 +979,53 @@ function initBtsGallery() {
     const dx = touchStartX - e.touches[0].pageX;
     reel.scrollLeft = touchScrollLeft + dx;
   }, { passive: true });
+
+  // Lightbox
+  const lb = document.getElementById('bts-lightbox');
+  const lbImg = document.getElementById('bts-lb-img');
+  const lbCounter = document.getElementById('bts-lb-counter');
+  const photos = Array.from(reel.querySelectorAll('.bts-photo img')).filter(img => img.style.display !== 'none');
+  let lbIndex = 0;
+
+  function lbShow(idx) {
+    lbIndex = (idx + photos.length) % photos.length;
+    lbImg.classList.add('fading');
+    setTimeout(() => {
+      lbImg.src = photos[lbIndex].src;
+      lbImg.alt = photos[lbIndex].alt;
+      lbImg.classList.remove('fading');
+    }, 120);
+    lbCounter.textContent = (lbIndex + 1) + ' / ' + photos.length;
+  }
+
+  function lbOpen(idx) {
+    lbShow(idx);
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function lbClose() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  photos.forEach((img, i) => {
+    img.parentElement.addEventListener('click', e => {
+      if (didDrag) { didDrag = false; return; }
+      lbOpen(i);
+    });
+  });
+
+  document.getElementById('bts-lb-close').addEventListener('click', lbClose);
+  document.getElementById('bts-lb-prev').addEventListener('click', () => lbShow(lbIndex - 1));
+  document.getElementById('bts-lb-next').addEventListener('click', () => lbShow(lbIndex + 1));
+  lb.addEventListener('click', e => { if (e.target === lb) lbClose(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') lbClose();
+    if (e.key === 'ArrowLeft') lbShow(lbIndex - 1);
+    if (e.key === 'ArrowRight') lbShow(lbIndex + 1);
+  });
 }
 
 /* ── Mobile Nav ─────────────────────────────────────────────── */
