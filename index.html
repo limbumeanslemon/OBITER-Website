@@ -29,7 +29,7 @@
           <img src="podcastlogo.png" alt="GNLU Obiter Logo"
                onerror="this.style.display='none'" />
           <div class="navbar-logo-text">
-            <span>GNLU</span> Obiter
+            <span>GNLU</span> <span class="navbar-obiter">Obiter</span>
           </div>
         </a>
       </div>
@@ -37,7 +37,6 @@
       <nav aria-label="Main navigation">
         <ul class="navbar-nav">
           <li><a href="#home">Home</a></li>
-          <li><a href="#featured">Featured</a></li>
           <li><a href="#messages">Messages</a></li>
           <li><a href="#episodes">Episodes</a></li>
           <li><a href="#team">Team</a></li>
@@ -68,7 +67,6 @@
   </div>
   <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation">
     <a href="#home">Home</a>
-    <a href="#featured">Featured</a>
     <a href="#messages">Messages</a>
     <a href="#episodes">Episodes</a>
     <a href="#team">Team</a>
@@ -528,21 +526,13 @@
         <p class="about-gnlu-body">
           <strong>Gujarat National Law University (GNLU)</strong> is the statutory university established by the Govt. of Gujarat under the <strong>Gujarat National Law University Act, 2003</strong>. The University is recognized by the <strong>Bar Council of India (BCI)</strong> and the <strong>University Grants Commission (UGC)</strong> (2f &amp; 12B). The University is also a member of the <strong>Association of Indian Universities (AIU)</strong>, <strong>United Nations Academic Impact (UNAI)</strong>, <strong>International Association of Law Schools (IALS)</strong>, <strong>Asian Law Institute (ASLI)</strong> and <strong>Shastri Indo-Canadian Institute</strong>.
         </p>
-        <div class="about-gnlu-badges">
-          <span class="gnlu-badge">BCI Recognized</span>
-          <span class="gnlu-badge">UGC Approved</span>
-          <span class="gnlu-badge">AIU Member</span>
-          <span class="gnlu-badge">UNAI Member</span>
-          <span class="gnlu-badge">IALS Member</span>
-          <span class="gnlu-badge">ASLI Member</span>
-        </div>
       </div>
       <div class="about-gnlu-image-wrap">
-        <div class="about-gnlu-image-frame">
+        <a href="https://www.gnlu.ac.in/GNLU/Home" target="_blank" rel="noopener" class="about-gnlu-image-frame" aria-label="Visit GNLU website">
           <img src="gnlu1.jpg" alt="Gujarat National Law University Campus" class="about-gnlu-image" loading="lazy"
                onerror="this.style.display='none'" />
           <div class="about-gnlu-image-shine"></div>
-        </div>
+        </a>
         <div class="about-gnlu-image-glow" aria-hidden="true"></div>
       </div>
     </div>
@@ -680,28 +670,6 @@
     </div>
   </div>
 </footer>
-
-<!-- ═══════════════════════════════════════════════════════════
-     SVG FILTERS
-════════════════════════════════════════════════════════════ -->
-<svg aria-hidden="true" style="position:absolute;width:0;height:0;overflow:hidden;">
-  <defs>
-    <!-- Liquid glass distortion (reduced scale for subtle effect) -->
-    <filter id="liquid-glass-filter" x="0%" y="0%" width="100%" height="100%" color-interpolation-filters="sRGB">
-      <feTurbulence type="fractalNoise" baseFrequency="0.05 0.05" numOctaves="1" seed="1" result="turbulence"/>
-      <feGaussianBlur in="turbulence" stdDeviation="2" result="blurredNoise"/>
-      <feDisplacementMap in="SourceGraphic" in2="blurredNoise" scale="12" xChannelSelector="R" yChannelSelector="B" result="displaced"/>
-      <feGaussianBlur in="displaced" stdDeviation="2" result="finalBlur"/>
-      <feComposite in="finalBlur" in2="finalBlur" operator="over"/>
-    </filter>
-    <!-- Gooey blob filter (grid.md) -->
-    <filter id="goo-filter">
-      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
-      <feColorMatrix in="blur" type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9" result="goo"/>
-      <feComposite in="SourceGraphic" in2="goo" operator="atop"/>
-    </filter>
-  </defs>
-</svg>
 
 <!-- ═══════════════════════════════════════════════════════════
      DATA FILES
@@ -1227,35 +1195,6 @@ function initContainerScroll() {
   update();
 }
 
-
-/* ── Stats Counter ───────────────────────────────────────────── */
-function initStatCounters() {
-  const items = document.querySelectorAll('[data-count]');
-  if (!items.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (!entry.isIntersecting) return;
-      const el = entry.target;
-      const target = parseInt(el.dataset.count, 10);
-      const suffix = el.querySelector('.stat-suffix');
-      const suffixText = suffix ? suffix.outerHTML : '';
-      const duration = target > 1000 ? 1800 : 900;
-      const start = performance.now();
-
-      function tick(now) {
-        const p = Math.min((now - start) / duration, 1);
-        const eased = 1 - Math.pow(1 - p, 3);
-        el.innerHTML = Math.round(eased * target) + suffixText;
-        if (p < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-      observer.unobserve(el);
-    });
-  }, { threshold: 0.6 });
-
-  items.forEach(el => observer.observe(el));
-}
 
 /* ── Init ────────────────────────────────────────────────────── */
 document.addEventListener('DOMContentLoaded', () => {
