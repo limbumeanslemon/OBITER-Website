@@ -91,7 +91,7 @@ const coreTeam = [
     role: "Convenor",
     batch: "Batch 2023–2028",
     photoFile: "team_devansh.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/devansh-yaduvanshi-a28459260"
   },
   {
     name: "Saumil Agarwal",
@@ -105,28 +105,28 @@ const coreTeam = [
     role: "Co-Secretary",
     batch: "Batch 2023–2028",
     photoFile: "team_tanisha.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/tanisha-brahmin-5043b22a7"
   },
   {
     name: "Kale Sanskruti Madhukar",
     role: "Magazine Head",
     batch: "Batch 2022–2027",
     photoFile: "team_kale.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/sanskruti-madhukar-kale-6074a923a"
   },
   {
     name: "Sara Dharwadkar",
     role: "Research Head",
     batch: "Batch 2023–2028",
     photoFile: "team_sara.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/sara-dharwadkar-834127261"
   },
   {
     name: "Kush Chaudhary",
     role: "Logistics Head",
     batch: "Batch 2023–2028",
     photoFile: "team_kush.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/kush-chaudhary-349a30283"
   },
   {
     name: "Rhuhi Sisodia",
@@ -147,21 +147,21 @@ const members = [
     role: "Member",
     batch: "Batch 2023–2028",
     photoFile: "team_hemang.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/hemang-nagpal-b7619a181"
   },
   {
     name: "Jhalak Singh",
     role: "Member",
     batch: "Batch 2023–2028",
     photoFile: "team_jhalak.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/jhalak-singh-3b1633252"
   },
   {
     name: "Monish Khaisagi",
     role: "Member",
     batch: "Batch 2023–2028",
     photoFile: "team_monish.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/monish-khaishagi-252a28409"
   },
   {
     name: "Prisha Mehta",
@@ -224,7 +224,7 @@ const members = [
     role: "Member",
     batch: "Batch 2024–2029",
     photoFile: "team_sakshi.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/sakshi-choudhary-24041524a"
   },
   {
     name: "Tamanna Soni",
@@ -273,6 +273,6 @@ const members = [
     role: "Member",
     batch: "Batch 2025–2030",
     photoFile: "team_soham.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/gsoham"
   }
 ];
