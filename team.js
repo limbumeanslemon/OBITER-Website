@@ -167,7 +167,7 @@ const members = [
     name: "Prisha Mehta",
     role: "Member",
     batch: "Batch 2023–2028",
-    photoFile: "team_prisha.jpg",
+    photoFile: "team_prishashah.jpg",
     linkedin: "https://www.linkedin.com/in/prisha-mehta-"
   },
   {
@@ -209,7 +209,7 @@ const members = [
     name: "Prisha Shah",
     role: "Member",
     batch: "Batch 2024–2029",
-    photoFile: "team_prishashah.jpg",
+    photoFile: "team_prisha.jpg",
     linkedin: "https://www.linkedin.com/in/prisha-shah-8a9448249"
   },
   {
