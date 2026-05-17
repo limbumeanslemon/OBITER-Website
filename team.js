@@ -98,7 +98,7 @@ const coreTeam = [
     role: "Secretary",
     batch: "Batch 2023–2028",
     photoFile: "team_saumil.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/saumilagarwal7"
   },
   {
     name: "Tanisha Brahmin",
@@ -133,7 +133,7 @@ const coreTeam = [
     role: "Social Media Head",
     batch: "Batch 2023–2028",
     photoFile: "team_rhuhi.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/rhuhisisodia"
   }
 ];
 
@@ -157,60 +157,67 @@ const members = [
     linkedin: ""
   },
   {
+    name: "Monish Khaisagi",
+    role: "Member",
+    batch: "Batch 2023–2028",
+    photoFile: "team_monish.jpg",
+    linkedin: ""
+  },
+  {
     name: "Prisha Mehta",
     role: "Member",
     batch: "Batch 2023–2028",
     photoFile: "team_prisha.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/prisha-mehta-"
   },
   {
     name: "Siddharth Dev Prasad",
     role: "Member",
     batch: "Batch 2023–2028",
     photoFile: "team_siddharth.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/siddharth-dev-prasad-424bb8207"
   },
   {
     name: "Veer Shah",
     role: "Member",
     batch: "Batch 2023–2028",
     photoFile: "team_veer.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/veer-shah-605ab32a4"
   },
   {
     name: "Chandni Garg",
     role: "Member",
     batch: "Batch 2024–2029",
     photoFile: "team_chandni.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/chandnigarg25"
   },
   {
     name: "Hitesh Thoria",
     role: "Member",
     batch: "Batch 2024–2029",
     photoFile: "team_hitesh.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/hitesh-thoria-0390ab309"
   },
   {
     name: "Megha Chhari",
     role: "Member",
     batch: "Batch 2024–2029",
     photoFile: "team_megha.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/megha-chhari-83b0b42a5"
   },
   {
     name: "Prisha Shah",
     role: "Member",
     batch: "Batch 2024–2029",
     photoFile: "team_prishashah.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/prisha-shah-8a9448249"
   },
   {
     name: "Reedhav Gulati",
     role: "Member",
     batch: "Batch 2024–2029",
     photoFile: "team_reedhav.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/reedhav-gulati"
   },
   {
     name: "Sakshi Choudhary",
@@ -224,42 +231,42 @@ const members = [
     role: "Member",
     batch: "Batch 2024–2029",
     photoFile: "team_tamanna.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/tamanna-soni06"
   },
   {
     name: "Anahita Shastri",
     role: "Member",
     batch: "Batch 2025–2030",
     photoFile: "team_anahita.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/anahita-shastri-027a18389"
   },
   {
     name: "Devasya Sharma",
     role: "Member",
     batch: "Batch 2025–2030",
     photoFile: "team_devasya.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/devasya-sharma-060742303"
   },
   {
     name: "Diksha Lal",
     role: "Member",
     batch: "Batch 2025–2030",
     photoFile: "team_diksha.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/diksha-lal-46475b369"
   },
   {
     name: "Disha Joshi",
     role: "Member",
     batch: "Batch 2025–2030",
     photoFile: "team_disha.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/dishajoshi1704"
   },
   {
     name: "Kanishka Ajwani",
     role: "Member",
     batch: "Batch 2025–2030",
     photoFile: "team_kanishka.jpg",
-    linkedin: ""
+    linkedin: "https://www.linkedin.com/in/kanishka-ajwani-39200b362"
   },
   {
     name: "Soham Gupta",
